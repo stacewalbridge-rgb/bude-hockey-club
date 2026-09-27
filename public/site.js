@@ -10,6 +10,14 @@ if(menuBtn&&mobileNav){
     menuBtn.setAttribute('aria-expanded','false');
   }));
 }
+function updateHomeGameBanner(){
+  const cards=[...document.querySelectorAll('.fixture-card')];
+  const home=cards.filter(card=>/\bhome\b/i.test(card.querySelector('.fixture-meta')?.textContent||''));
+  cards.forEach(card=>card.classList.remove('home-fixture'));
+  home.forEach(card=>card.classList.add('home-fixture'));
+  const banner=document.getElementById('home-game-banner');
+  if(banner) banner.hidden=home.length===0;
+}
 async function loadFixtures(){
   const grid=document.getElementById('fixtures-grid');
   if(!grid) return;
@@ -27,6 +35,8 @@ async function loadFixtures(){
         <div class="fixture-meta">${f.meta}</div>
         <div class="fixture-source"><a class="link" href="${f.source}" target="_blank" rel="noreferrer">England Hockey ↗</a></div>
       </article>`).join('');
+    updateHomeGameBanner();
   }catch(e){}
 }
 loadFixtures();
+updateHomeGameBanner();
