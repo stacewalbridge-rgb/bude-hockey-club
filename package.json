@@ -1,0 +1,12 @@
+{
+  "name": "bude-hockey-club",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "preview": "wrangler preview"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
