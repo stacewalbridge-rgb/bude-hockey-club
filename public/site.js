@@ -33,7 +33,7 @@ async function loadFixtures(){
         <div class="fixture-date">${f.date}</div>
         <div class="fixture-opponent">${f.fixture}</div>
         <div class="fixture-meta">${f.meta}</div>
-        <div class="fixture-home-badge" style="${/\\bhome\\b/i.test(f.meta||'')?'':'display:none'}">HOME GAME • BUDEHAVEN ASTRO TURF PITCH</div>
+        <div class="fixture-home-badge" style="${/\bhome\b/i.test(f.meta||'')?'':'display:none'}">HOME GAME • BUDEHAVEN ASTRO TURF PITCH</div>
         <div class="fixture-source"><a class="link" href="${f.source}" target="_blank" rel="noreferrer">England Hockey ↗</a></div>
       </article>`).join('');
     updateHomeGameBanner();
