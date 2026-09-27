@@ -12,7 +12,7 @@ if(menuBtn&&mobileNav){
 }
 function updateHomeGameBanner(){
   const cards=[...document.querySelectorAll('.fixture-card')];
-  const home=cards.filter(card=>/\bhome\b/i.test(card.querySelector('.fixture-meta')?.textContent||''));
+  const home=cards.filter(card=>(card.querySelector('.fixture-meta')?.textContent||'').toLowerCase().includes('home'));
   cards.forEach(card=>card.classList.remove('home-fixture'));
   home.forEach(card=>card.classList.add('home-fixture'));
   const banner=document.getElementById('home-game-banner');
@@ -33,7 +33,7 @@ async function loadFixtures(){
         <div class="fixture-date">${f.date}</div>
         <div class="fixture-opponent">${f.fixture}</div>
         <div class="fixture-meta">${f.meta}</div>
-        <div class="fixture-home-badge" style="${/\bhome\b/i.test(f.meta||'')?'':'display:none'}">HOME GAME • BUDEHAVEN ASTRO TURF PITCH</div>
+        <div class="fixture-home-badge" style="${(f.meta||'').toLowerCase().includes('home')?'':'display:none'}">HOME GAME • BUDEHAVEN ASTRO TURF PITCH</div>
         <div class="fixture-source"><a class="link" href="${f.source}" target="_blank" rel="noreferrer">England Hockey ↗</a></div>
       </article>`).join('');
     updateHomeGameBanner();
