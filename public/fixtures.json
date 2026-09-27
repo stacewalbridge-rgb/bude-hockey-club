@@ -1,0 +1,37 @@
+{
+  "updated": "2026-09-27",
+  "fixtures": [
+    {
+      "team": "Bude M1",
+      "league": "Men's Piran Division 1",
+      "date": "Sat 3 Oct",
+      "fixture": "Bude M1 v Truro M3",
+      "meta": "13:30 • Home",
+      "source": "https://www.englandhockey.co.uk/teams/truro-m3-mens"
+    },
+    {
+      "team": "Men's Development",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 3 Oct",
+      "fixture": "Duchy M3 v Bude M2 Dev",
+      "meta": "Away • Push-back TBC",
+      "source": "https://southcentral.englandhockey.co.uk/teams/bude-m2-dev-mens"
+    },
+    {
+      "team": "Ladies 1",
+      "league": "Women's Trelawney Division 2",
+      "date": "Sat 3 Oct",
+      "fixture": "Bude W1 v Caradon W4",
+      "meta": "Home • Push-back TBC",
+      "source": "https://west.englandhockey.co.uk/teams/bude-w1-womens"
+    },
+    {
+      "team": "Ladies Development",
+      "league": "Women's Trelawney Division 3",
+      "date": "Sat 3 Oct",
+      "fixture": "St Austell W2 Dev v Bude W2 Dev",
+      "meta": "13:45 • Penair Secondary School, Truro",
+      "source": "https://east.englandhockey.co.uk/teams/bude-w2-dev-womens"
+    }
+  ]
+}
