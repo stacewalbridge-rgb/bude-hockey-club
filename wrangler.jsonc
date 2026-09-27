@@ -3,6 +3,6 @@
   "name": "bude-hockey-club",
   "compatibility_date": "2026-09-27",
   "assets": {
-    "directory": "."
+    "directory": "./public"
   }
 }
