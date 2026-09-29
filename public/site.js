@@ -41,3 +41,27 @@ async function loadFixtures(){
 }
 loadFixtures();
 updateHomeGameBanner();
+
+
+/* Load the supplied full-quality team images without the old tiny thumbnails. */
+const teamImagePayloads={
+  'assets/team-m1.webp':['/assets/data/final-team-m1.b64'],
+  'assets/team-mens-development.webp':['/assets/data/final-team-mens-development.b64'],
+  'assets/team-ladies-1.webp':['/assets/data/final-team-ladies-1.b64'],
+  'assets/team-ladies-development.webp':['/assets/data/final-team-ladies-development-0.b64','/assets/data/final-team-ladies-development-1.b64'],
+  'assets/team-juniors.webp':['/assets/data/final-team-juniors-0.b64','/assets/data/final-team-juniors-1.b64']
+};
+async function loadTeamImagePayload(img){
+  const raw=(img.getAttribute('src')||'').replace(/^\//,'');
+  const parts=teamImagePayloads[raw];
+  if(!parts) return;
+  try{
+    const chunks=await Promise.all(parts.map(async p=>{
+      const res=await fetch(p,{cache:'force-cache'});
+      if(!res.ok) throw new Error('image payload '+res.status);
+      return (await res.text()).trim();
+    }));
+    img.src='data:image/webp;base64,'+chunks.join('');
+  }catch(e){console.warn('Team image upgrade failed:',raw,e);}
+}
+document.querySelectorAll('img').forEach(loadTeamImagePayload);
