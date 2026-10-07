@@ -1,5 +1,7 @@
 {
-  "updated": "2026-09-27",
+  "updated": "2026-10-07T21:01:22.207Z",
+  "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
+  "automatic": true,
   "fixtures": [
     {
       "team": "Bude M1",
@@ -32,6 +34,68 @@
       "fixture": "St Austell W2 Dev v Bude W2 Dev",
       "meta": "13:45 • Penair Secondary School, Truro",
       "source": "https://east.englandhockey.co.uk/teams/bude-w2-dev-womens"
+    }
+  ],
+  "results": [
+    {
+      "team": "Bude M1",
+      "league": "Men's Piran Division 1",
+      "date": "SAT 26 SEPT",
+      "score": "30–14",
+      "opponent": "SAT",
+      "venue": "Stoke Damerel Community College",
+      "location": "Stoke Damerel Community College",
+      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
+    },
+    {
+      "team": "Bude M1",
+      "league": "Men's Piran Division 1",
+      "date": "",
+      "score": "30–14",
+      "opponent": "Ocean City M3",
+      "venue": "Stoke Damerel Community College",
+      "location": "Stoke Damerel Community College",
+      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
+    },
+    {
+      "team": "Ladies 1",
+      "league": "Women's Trelawney Division 2",
+      "date": "",
+      "score": "13–30",
+      "opponent": "Newquay W3 Dev",
+      "venue": "Newquay W3 Dev",
+      "location": "Newquay W3 Dev",
+      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
+    },
+    {
+      "team": "Ladies Development",
+      "league": "Women's Trelawney Division 3",
+      "date": "",
+      "score": "15–10",
+      "opponent": "Falmouth W4",
+      "venue": "Falmouth W4",
+      "location": "Falmouth W4",
+      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
+    },
+    {
+      "team": "Men's Development",
+      "league": "Men's Piran Division 3",
+      "date": "",
+      "score": "12–0",
+      "opponent": "Bodmin M2",
+      "venue": "Bodmin M2",
+      "location": "Bodmin M2",
+      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
+    },
+    {
+      "team": "Bude M1",
+      "league": "Men's Piran Division 1",
+      "date": "SAT 26 SEPT",
+      "score": "14–30",
+      "opponent": "Find a Club",
+      "venue": "Find a Club",
+      "location": "Find a Club",
+      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
     }
   ]
 }
