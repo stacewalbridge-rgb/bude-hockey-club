@@ -2,6 +2,11 @@ name: Update England Hockey fixtures
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update-england-hockey.mjs'
+      - '.github/workflows/update-england-hockey.yml'
   schedule:
     - cron: '17 5,17 * * *'
 
