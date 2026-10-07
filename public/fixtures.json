@@ -1,101 +1,44 @@
 {
-  "updated": "2026-10-07T21:01:22.207Z",
+  "updated": "2026-10-07T21:07:24.747Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 3 Oct",
-      "fixture": "Bude M1 v Truro M3",
-      "meta": "13:30 • Home",
-      "source": "https://www.englandhockey.co.uk/teams/truro-m3-mens"
+      "date": "Sat 10 Oct",
+      "fixture": "Ocean City M3 v Bude M1",
+      "meta": "14:30 • Away • Stoke Damerel Community College",
+      "location": "Stoke Damerel Community College",
+      "source": "https://west.englandhockey.co.uk/fixtures/c569017d-4775-4999-b602-fa0bb83142ec"
     },
     {
       "team": "Men's Development",
       "league": "Men's Piran Division 3",
-      "date": "Sat 3 Oct",
-      "fixture": "Duchy M3 v Bude M2 Dev",
-      "meta": "Away • Push-back TBC",
-      "source": "https://southcentral.englandhockey.co.uk/teams/bude-m2-dev-mens"
+      "date": "Sat 10 Oct",
+      "fixture": "Bude M2 v Bodmin M2",
+      "meta": "12:00 • Home",
+      "location": "",
+      "source": "https://west.englandhockey.co.uk/fixtures/c9e57245-528b-4d80-a37c-ebb253840b77"
     },
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 3 Oct",
-      "fixture": "Bude W1 v Caradon W4",
-      "meta": "12:00 • Home",
-      "source": "https://west.englandhockey.co.uk/teams/bude-w1-womens"
+      "date": "Sat 10 Oct",
+      "fixture": "Bude W1 v Newquay W3 Dev",
+      "meta": "13:30 • Home",
+      "location": "",
+      "source": "https://west.englandhockey.co.uk/fixtures/71a52beb-2d61-4cca-911d-c8d5d095fd31"
     },
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 3 Oct",
-      "fixture": "St Austell W2 Dev v Bude W2 Dev",
-      "meta": "13:45 • Penair Secondary School, Truro",
-      "source": "https://east.englandhockey.co.uk/teams/bude-w2-dev-womens"
+      "date": "Sat 10 Oct",
+      "fixture": "Falmouth W4 v Bude W2 Dev",
+      "meta": "10:15 • Away • Penryn - Penryn College (V)",
+      "location": "Penryn - Penryn College (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/35989853-dcbc-4922-83ed-4520895d8426"
     }
   ],
-  "results": [
-    {
-      "team": "Bude M1",
-      "league": "Men's Piran Division 1",
-      "date": "SAT 26 SEPT",
-      "score": "30–14",
-      "opponent": "SAT",
-      "venue": "Stoke Damerel Community College",
-      "location": "Stoke Damerel Community College",
-      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
-    },
-    {
-      "team": "Bude M1",
-      "league": "Men's Piran Division 1",
-      "date": "",
-      "score": "30–14",
-      "opponent": "Ocean City M3",
-      "venue": "Stoke Damerel Community College",
-      "location": "Stoke Damerel Community College",
-      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
-    },
-    {
-      "team": "Ladies 1",
-      "league": "Women's Trelawney Division 2",
-      "date": "",
-      "score": "13–30",
-      "opponent": "Newquay W3 Dev",
-      "venue": "Newquay W3 Dev",
-      "location": "Newquay W3 Dev",
-      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
-    },
-    {
-      "team": "Ladies Development",
-      "league": "Women's Trelawney Division 3",
-      "date": "",
-      "score": "15–10",
-      "opponent": "Falmouth W4",
-      "venue": "Falmouth W4",
-      "location": "Falmouth W4",
-      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
-    },
-    {
-      "team": "Men's Development",
-      "league": "Men's Piran Division 3",
-      "date": "",
-      "score": "12–0",
-      "opponent": "Bodmin M2",
-      "venue": "Bodmin M2",
-      "location": "Bodmin M2",
-      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
-    },
-    {
-      "team": "Bude M1",
-      "league": "Men's Piran Division 1",
-      "date": "SAT 26 SEPT",
-      "score": "14–30",
-      "opponent": "Find a Club",
-      "venue": "Find a Club",
-      "location": "Find a Club",
-      "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures"
-    }
-  ]
+  "results": []
 }
