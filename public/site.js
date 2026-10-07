@@ -39,12 +39,16 @@ async function loadFixtures(){
         </article>`).join('');
     }
     if(resultsGrid && Array.isArray(data.results) && data.results.length){
-      resultsGrid.innerHTML=data.results.map(r=>`
-        <div class="result-card">
-          <strong>${r.team}</strong>
+      resultsGrid.innerHTML=data.results.map(r=>{
+        const m=String(r.score||'').match(/(\d+)\s*[-–:]\s*(\d+)/);
+        const win=m && Number(m[1])>Number(m[2]);
+        return `
+        <div class="result-card ${win?'win-result':''}">
+          <div class="result-topline"><strong>${r.team}</strong>${win?'<span class="win-star" title="Bude win" aria-label="Bude win">★</span>':''}</div>
           <div class="score">${r.score}</div>
           <div>${r.opponent||''}${r.venue?' • '+r.venue:''}</div>
-        </div>`).join('');
+        </div>`;
+      }).join('');
     }
     updateHomeGameBanner();
   }catch(e){console.warn('Automatic England Hockey data failed',e)}
