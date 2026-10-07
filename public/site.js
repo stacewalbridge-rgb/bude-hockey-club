@@ -20,24 +20,34 @@ function updateHomeGameBanner(){
 }
 async function loadFixtures(){
   const grid=document.getElementById('fixtures-grid');
+  const resultsGrid=document.getElementById('results-grid');
   if(!grid) return;
   try{
     const res=await fetch('/fixtures.json',{cache:'no-store'});
     if(!res.ok) return;
     const data=await res.json();
-    if(!Array.isArray(data.fixtures)||!data.fixtures.length) return;
-    grid.innerHTML=data.fixtures.map(f=>`
-      <article class="fixture-card">
-        <div class="fixture-team">${f.team}</div>
-        <div class="fixture-league">${f.league}</div>
-        <div class="fixture-date">${f.date}</div>
-        <div class="fixture-opponent">${f.fixture}</div>
-        <div class="fixture-meta">${f.meta}</div>
-        <div class="fixture-home-badge" style="${(f.meta||'').toLowerCase().includes('home')?'':'display:none'}">HOME GAME • BUDEHAVEN ASTRO TURF PITCH</div>
-        <div class="fixture-source"><a class="link" href="${f.source}" target="_blank" rel="noreferrer">England Hockey ↗</a></div>
-      </article>`).join('');
+    if(Array.isArray(data.fixtures)&&data.fixtures.length){
+      grid.innerHTML=data.fixtures.map(f=>`
+        <article class="fixture-card">
+          <div class="fixture-team">${f.team}</div>
+          <div class="fixture-league">${f.league||''}</div>
+          <div class="fixture-date">${f.date}</div>
+          <div class="fixture-opponent">${f.fixture}</div>
+          <div class="fixture-meta">${f.meta||''}</div>
+          <div class="fixture-home-badge" style="${(f.meta||'').toLowerCase().includes('home')?'':'display:none'}">HOME GAME • BUDEHAVEN ASTRO TURF PITCH</div>
+          <div class="fixture-source"><a class="link" href="${f.source}" target="_blank" rel="noreferrer">England Hockey ↗</a></div>
+        </article>`).join('');
+    }
+    if(resultsGrid && Array.isArray(data.results) && data.results.length){
+      resultsGrid.innerHTML=data.results.map(r=>`
+        <div class="result-card">
+          <strong>${r.team}</strong>
+          <div class="score">${r.score}</div>
+          <div>${r.opponent||''}${r.venue?' • '+r.venue:''}</div>
+        </div>`).join('');
+    }
     updateHomeGameBanner();
-  }catch(e){}
+  }catch(e){console.warn('Automatic England Hockey data failed',e)}
 }
 loadFixtures();
 updateHomeGameBanner();
