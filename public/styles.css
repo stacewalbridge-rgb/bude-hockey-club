@@ -36,3 +36,9 @@
 .teams-grid .team-card:nth-child(5)>img{height:auto;min-height:0;object-fit:contain}
 @media(max-width:960px){.team-card>img{height:auto;min-height:0}.teams-grid .team-card:nth-child(5)>img{height:auto;min-height:0}}
 @media(max-width:640px){.team-card>img,.teams-grid .team-card:nth-child(5)>img{height:auto;min-height:0;object-fit:contain}.teams-grid .team-card:nth-child(3)>img,.teams-grid .team-card:nth-child(5)>img{max-height:none}}
+
+
+/* Recent-result win marker */
+.result-topline{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.win-star{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;font-size:1.25rem;line-height:1;color:#b8860b;background:#fff7cf;border:1px solid #e7bf32;box-shadow:0 6px 14px rgba(231,191,50,.22)}
+.win-result{border-color:#e7bf32;box-shadow:0 12px 28px rgba(231,191,50,.12)}
