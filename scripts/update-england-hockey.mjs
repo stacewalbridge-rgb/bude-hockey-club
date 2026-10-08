@@ -5,10 +5,10 @@ const SOURCE='https://west.englandhockey.co.uk/clubs/bude-hc/fixtures';
 const OUT=new URL('../public/fixtures.json',import.meta.url);
 
 const TEAMS=[
-  {key:'m1',name:'Bude M1',aliases:['Bude M1']},
-  {key:'m2',name:"Men's Development",aliases:['Bude M2 Dev','Bude M2']},
-  {key:'w1',name:'Ladies 1',aliases:['Bude W1']},
-  {key:'w2',name:'Ladies Development',aliases:['Bude W2 Dev','Bude W2']}
+  {key:'m1',name:'Bude M1',aliases:['Bude M1'],url:'https://west.englandhockey.co.uk/teams/bude-m1-mens'},
+  {key:'m2',name:"Men's Development",aliases:['Bude M2 Dev','Bude M2'],url:'https://west.englandhockey.co.uk/teams/bude-m2-dev-mens'},
+  {key:'w1',name:'Ladies 1',aliases:['Bude W1'],url:'https://west.englandhockey.co.uk/teams/bude-w1-womens'},
+  {key:'w2',name:'Ladies Development',aliases:['Bude W2 Dev','Bude W2'],url:'https://west.englandhockey.co.uk/teams/bude-w2-dev-womens'}
 ];
 const LEAGUES={m1:"Men's Piran Division 1",m2:"Men's Piran Division 3",w1:"Women's Trelawney Division 2",w2:"Women's Trelawney Division 3"};
 const MONTHS={January:0,February:1,March:2,April:3,May:4,June:5,July:6,August:7,September:8,October:9,November:10,December:11};
@@ -82,11 +82,24 @@ async function main(){
     await page.goto(SOURCE,{waitUntil:'domcontentloaded',timeout:90000});
     await page.waitForTimeout(12000);
     try{await page.waitForLoadState('networkidle',{timeout:15000});}catch{}
-    const links=await page.evaluate(()=>[...new Set([...document.querySelectorAll('a[href*="/fixtures/"]')].map(a=>a.href.split('?')[0]))]);
-    if(!links.length) throw new Error('England Hockey loaded but no fixture links were found; refusing to keep stale data as a successful sync.');
+    const links=new Set(await page.evaluate(()=>[...document.querySelectorAll('a[href*="/fixtures/"]')].map(a=>a.href.split('?')[0])));
+    for(const team of TEAMS){
+      const tp=await browser.newPage({viewport:{width:1400,height:1100}});
+      try{
+        await tp.goto(team.url,{waitUntil:'domcontentloaded',timeout:60000});
+        await tp.waitForTimeout(5000);
+        for(let i=0;i<6;i++){ await tp.mouse.wheel(0,1400); await tp.waitForTimeout(250); }
+        const resultTab=tp.getByText(/Results/i).first();
+        try{ if(await resultTab.isVisible({timeout:1200})){ await resultTab.click(); await tp.waitForTimeout(2500); } }catch{}
+        const more=await tp.evaluate(()=>[...document.querySelectorAll('a[href*="/fixtures/"]')].map(a=>a.href.split('?')[0]));
+        more.forEach(x=>links.add(x));
+      }catch(e){console.warn('Team page scan failed',team.url,e.message)}
+      finally{await tp.close()}
+    }
+    if(!links.size) throw new Error('England Hockey loaded but no fixture links were found; refusing to keep stale data as a successful sync.');
 
     const parsed=[];
-    for(const url of links.slice(0,120)){
+    for(const url of [...links].slice(0,180)){
       const p=await browser.newPage({viewport:{width:1280,height:1000}});
       try{
         await p.goto(url+'?tab=moreinfo',{waitUntil:'domcontentloaded',timeout:45000});
