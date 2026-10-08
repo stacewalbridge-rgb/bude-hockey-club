@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T21:07:24.747Z",
+  "updated": "2026-10-08T06:53:42.401Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -40,5 +40,39 @@
       "source": "https://west.englandhockey.co.uk/fixtures/35989853-dcbc-4922-83ed-4520895d8426"
     }
   ],
-  "results": []
+  "results": [
+    {
+      "team": "Bude M1",
+      "league": "Men's Piran Division 1",
+      "date": "Sat 3 Oct",
+      "score": "6–1",
+      "opponent": "Truro M3",
+      "venue": "Home",
+      "location": "",
+      "scorers": [],
+      "source": "https://west.englandhockey.co.uk/fixtures/bf79d6d0-67c1-478b-a284-52b5754f78b2"
+    },
+    {
+      "team": "Ladies 1",
+      "league": "Women's Trelawney Division 2",
+      "date": "Sat 3 Oct",
+      "score": "10–0",
+      "opponent": "Caradon W4",
+      "venue": "Home",
+      "location": "",
+      "scorers": [],
+      "source": "https://west.englandhockey.co.uk/fixtures/f152d969-e49f-4ce0-a5f1-c0ccc2eef20b"
+    },
+    {
+      "team": "Ladies Development",
+      "league": "Women's Trelawney Division 3",
+      "date": "Sat 3 Oct",
+      "score": "3–1",
+      "opponent": "St Austell W2 Dev",
+      "venue": "Away",
+      "location": "Truro - Penair Secondary School (V)",
+      "scorers": [],
+      "source": "https://west.englandhockey.co.uk/fixtures/179174a0-45f9-4403-b808-d4aef24955ac"
+    }
+  ]
 }
