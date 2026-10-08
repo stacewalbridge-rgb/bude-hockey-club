@@ -34,4 +34,5 @@ jobs:
           git add public/fixtures.json
           git diff --cached --quiet && exit 0
           git commit -m "Auto-update England Hockey fixtures and results"
+          git pull --rebase origin main
           git push
