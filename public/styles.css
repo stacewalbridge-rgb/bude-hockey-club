@@ -46,3 +46,22 @@
 .win-stars{display:inline-flex;align-items:center;gap:3px;color:#c28a00;font-size:1.15rem;letter-spacing:.04em;text-shadow:0 1px 0 #fff}
 .win-message{margin-top:12px;padding:9px 12px;border-radius:12px;background:linear-gradient(135deg,#fff7cf,#fffdf2);border:1px solid #e7bf32;color:#8a6500;font-weight:900;font-size:.9rem}
 .win-result{border:2px solid #e7bf32;background:linear-gradient(180deg,#fffef7,#fff)}
+
+/* Winning result splash */
+.result-card{position:relative;overflow:hidden}
+.win-result{border:2px solid #e7bf32;background:linear-gradient(145deg,#fffdf2 0%,#fff 52%,#fff8d9 100%);box-shadow:0 14px 34px rgba(231,191,50,.18)}
+.win-result::before,.win-result::after{content:"★";position:absolute;color:rgba(231,191,50,.16);font-size:5rem;line-height:1;pointer-events:none}
+.win-result::before{right:-10px;top:28px;transform:rotate(16deg)}
+.win-result::after{left:-12px;bottom:-18px;transform:rotate(-18deg)}
+.win-stars{position:relative;z-index:2;display:inline-flex;align-items:center;gap:3px;color:#b98300;font-size:1.2rem;letter-spacing:.05em;text-shadow:0 1px 0 #fff}
+.win-splash{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.win-splash span{position:absolute;color:rgba(231,191,50,.28);font-size:1.35rem;filter:drop-shadow(0 2px 2px rgba(120,86,0,.08))}
+.win-splash span:nth-child(1){top:18%;left:7%;transform:rotate(-18deg)}
+.win-splash span:nth-child(2){top:11%;right:20%;font-size:1rem;transform:rotate(12deg)}
+.win-splash span:nth-child(3){bottom:18%;right:8%;transform:rotate(22deg)}
+.win-splash span:nth-child(4){bottom:9%;left:30%;font-size:.95rem;transform:rotate(-8deg)}
+.win-splash span:nth-child(5){top:48%;right:35%;font-size:.8rem}
+.goal-scorers{position:relative;z-index:2;margin-top:14px;padding-top:12px;border-top:1px solid rgba(231,191,50,.55);font-size:.86rem}
+.goal-scorers>strong{display:block;margin-bottom:8px;color:var(--navy)}
+.scorer-chip{display:inline-flex;align-items:center;margin:0 7px 7px 0;padding:6px 9px;border-radius:999px;background:#fff7cf;border:1px solid #ead26a;color:#6f5600;font-weight:800}
+.scorer-chip small{margin-left:4px;font-size:.78em;color:#8a6c0a}
