@@ -47,7 +47,8 @@ async function loadFixtures(){
           <div class="result-topline"><strong>${r.team}</strong>${win?'<span class="win-stars" title="Bude win" aria-label="Bude win">★ ★ ★</span>':''}</div>
           <div class="score">${r.score}</div>
           <div>${r.opponent||''}${r.venue?' • '+r.venue:''}</div>
-          ${win?'<div class="win-message">Brilliant Bude — great win!</div>':''}
+          ${Array.isArray(r.scorers)&&r.scorers.length?'<div class="goal-scorers"><strong>Goal scorers</strong><div>'+r.scorers.map(s=>'<span class="scorer-chip">'+(s.name||'Name Withheld')+(s.minute?' <small>'+s.minute+'’</small>':'')+'</span>').join('')+'</div></div>':''}
+          ${win?'<div class="win-splash" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>':''}
         </div>`;
       }).join('');
     } else if(resultsGrid){
