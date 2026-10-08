@@ -45,6 +45,25 @@ function extractVenue(lines,dateLineIndex){
   }
   return '';
 }
+function extractBudeScorers(lines,scoreIndex,dateIndex,isHome){
+  if(scoreIndex<0||dateIndex<0||dateIndex<=scoreIndex) return [];
+  const segment=lines.slice(scoreIndex+1,dateIndex);
+  const scorers=[];
+  for(const line of segment){
+    let m;
+    if(isHome){
+      m=line.match(/^(.+?)\s+(\d{1,3})[’']$/);
+      if(m) scorers.push({name:clean(m[1]),minute:Number(m[2])});
+    }else{
+      m=line.match(/^(\d{1,3})[’']\s+(.+)$/);
+      if(m) scorers.push({name:clean(m[2]),minute:Number(m[1])});
+    }
+  }
+  return scorers
+    .filter(x=>x.name && !/^(Bude|HC|Hockey)$/i.test(x.name))
+    .map(x=>({name:/name withheld/i.test(x.name)?'Name Withheld':x.name,minute:x.minute}));
+}
+
 function parseFixturePage(title,body,url){
   const titleText=clean(title).replace(/\s*\|\s*West Hockey\s*$/i,'');
   const tm=titleText.match(/^(.*?)\s+vs\s+(.*?)$/i);
@@ -64,14 +83,19 @@ function parseFixturePage(title,body,url){
   const isHome=teamFor(home)?.key===budeTeam.key;
   const opponent=isHome?away:home;
   let budeScore=null,oppScore=null;
+  let scoreIndex=-1;
   if(sm){
     const a=Number(sm[1]),b=Number(sm[2]);
     budeScore=isHome?a:b; oppScore=isHome?b:a;
+    scoreIndex=lines.findIndex(x=>scoreRx.test(x));
   }
+  const scorers=(budeScore!==null && budeScore>0)
+    ? extractBudeScorers(lines,scoreIndex,dateLineIndex,isHome).slice(0,budeScore)
+    : [];
   return {
     team:budeTeam.name,key:budeTeam.key,league:LEAGUES[budeTeam.key],
     home,away,isHome,opponent,dateStamp:stamp,date:shortDate(stamp),
-    time:dt[4],venue,source:url,budeScore,oppScore
+    time:dt[4],venue,source:url,budeScore,oppScore,scorers
   };
 }
 
@@ -85,14 +109,33 @@ async function main(){
     const links=new Set(await page.evaluate(()=>[...document.querySelectorAll('a[href*="/fixtures/"]')].map(a=>a.href.split('?')[0])));
     for(const team of TEAMS){
       const tp=await browser.newPage({viewport:{width:1400,height:1100}});
+      const discovered=new Set();
+      const uuidRx=/\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b/ig;
+      tp.on('response',async response=>{
+        try{
+          const ct=(response.headers()['content-type']||'').toLowerCase();
+          if(!ct.includes('json')) return;
+          const txt=await response.text();
+          if(!/fixture|result|match|bude/i.test(txt)) return;
+          const ids=txt.match(uuidRx)||[];
+          ids.forEach(id=>discovered.add(id.toLowerCase()));
+        }catch{}
+      });
       try{
         await tp.goto(team.url,{waitUntil:'domcontentloaded',timeout:60000});
-        await tp.waitForTimeout(5000);
-        for(let i=0;i<6;i++){ await tp.mouse.wheel(0,1400); await tp.waitForTimeout(250); }
-        const resultTab=tp.getByText(/Results/i).first();
-        try{ if(await resultTab.isVisible({timeout:1200})){ await resultTab.click(); await tp.waitForTimeout(2500); } }catch{}
+        await tp.waitForTimeout(7000);
+        for(let i=0;i<8;i++){ await tp.mouse.wheel(0,1500); await tp.waitForTimeout(300); }
+        const buttons=tp.getByText(/Fixtures|Results|Fixtures & Results/i);
+        try{
+          const n=await buttons.count();
+          for(let i=0;i<n;i++){
+            const b=buttons.nth(i);
+            if(await b.isVisible()){ await b.click(); await tp.waitForTimeout(1800); }
+          }
+        }catch{}
         const more=await tp.evaluate(()=>[...document.querySelectorAll('a[href*="/fixtures/"]')].map(a=>a.href.split('?')[0]));
         more.forEach(x=>links.add(x));
+        discovered.forEach(id=>links.add('https://west.englandhockey.co.uk/fixtures/'+id));
       }catch(e){console.warn('Team page scan failed',team.url,e.message)}
       finally{await tp.close()}
     }
@@ -132,7 +175,9 @@ async function main(){
           score:`${previous.budeScore}–${previous.oppScore}`,
           opponent:previous.opponent,
           venue:previous.isHome?'Home':'Away',
-          location:previous.venue,source:previous.source
+          location:previous.venue,
+          scorers:previous.scorers||[],
+          source:previous.source
         });
       }
     }
