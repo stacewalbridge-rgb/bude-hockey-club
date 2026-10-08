@@ -44,11 +44,14 @@ async function loadFixtures(){
         const win=m && Number(m[1])>Number(m[2]);
         return `
         <div class="result-card ${win?'win-result':''}">
-          <div class="result-topline"><strong>${r.team}</strong>${win?'<span class="win-star" title="Bude win" aria-label="Bude win">★</span>':''}</div>
+          <div class="result-topline"><strong>${r.team}</strong>${win?'<span class="win-stars" title="Bude win" aria-label="Bude win">★ ★ ★</span>':''}</div>
           <div class="score">${r.score}</div>
           <div>${r.opponent||''}${r.venue?' • '+r.venue:''}</div>
+          ${win?'<div class="win-message">Brilliant Bude — great win!</div>':''}
         </div>`;
       }).join('');
+    } else if(resultsGrid){
+      resultsGrid.innerHTML='<div class="result-card">Results are being updated from England Hockey.</div>';
     }
     updateHomeGameBanner();
   }catch(e){console.warn('Automatic England Hockey data failed',e)}
