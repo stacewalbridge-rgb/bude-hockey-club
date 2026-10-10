@@ -1,78 +1,80 @@
 {
-  "updated": "2026-10-10T11:21:29.314Z",
+  "updated": "2026-10-10T20:43:59.897Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 10 Oct",
-      "fixture": "Ocean City M3 v Bude M1",
-      "meta": "14:30 • Away • Stoke Damerel Community College",
-      "location": "Stoke Damerel Community College",
-      "source": "https://west.englandhockey.co.uk/fixtures/c569017d-4775-4999-b602-fa0bb83142ec"
-    },
-    {
-      "team": "Men's Development",
-      "league": "Men's Piran Division 3",
-      "date": "Sat 10 Oct",
-      "fixture": "Bude M2 v Bodmin M2",
-      "meta": "12:00 • Home",
-      "location": "",
-      "source": "https://west.englandhockey.co.uk/fixtures/c9e57245-528b-4d80-a37c-ebb253840b77"
+      "date": "Sat 17 Oct",
+      "fixture": "Camborne SoM M1 v Bude M1",
+      "meta": "14:45 • Away • Penryn - Penryn College (V)",
+      "location": "Penryn - Penryn College (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/fe0047b5-a7a3-4621-9e65-0931407200c3"
     },
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 10 Oct",
-      "fixture": "Bude W1 v Newquay W3 Dev",
-      "meta": "13:30 • Home",
-      "location": "",
-      "source": "https://west.englandhockey.co.uk/fixtures/71a52beb-2d61-4cca-911d-c8d5d095fd31"
+      "date": "Sat 17 Oct",
+      "fixture": "Truro W2 v Bude W1",
+      "meta": "14:30 • Away • Truro - Truro School (V)",
+      "location": "Truro - Truro School (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/fb38fa27-b2f2-458a-a806-6472deefbfb8"
     },
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 10 Oct",
-      "fixture": "Falmouth W4 v Bude W2 Dev",
-      "meta": "10:15 • Away • Penryn - Penryn College (V)",
-      "location": "Penryn - Penryn College (V)",
-      "source": "https://west.englandhockey.co.uk/fixtures/35989853-dcbc-4922-83ed-4520895d8426"
+      "date": "Sat 17 Oct",
+      "fixture": "Bude W2 Dev v Truro W3",
+      "meta": "12:00 • Home",
+      "location": "",
+      "source": "https://west.englandhockey.co.uk/fixtures/f2a09f66-9730-4b10-8846-d2a8304a6fb8"
     }
   ],
   "results": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 3 Oct",
-      "score": "6–1",
-      "opponent": "Truro M3",
+      "date": "Sat 10 Oct",
+      "score": "6–0",
+      "opponent": "Ocean City M3",
+      "venue": "Away",
+      "location": "Stoke Damerel Community College",
+      "scorers": [],
+      "source": "https://west.englandhockey.co.uk/fixtures/c569017d-4775-4999-b602-fa0bb83142ec"
+    },
+    {
+      "team": "Men's Development",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 10 Oct",
+      "score": "1–6",
+      "opponent": "Bodmin M2",
       "venue": "Home",
       "location": "",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/bf79d6d0-67c1-478b-a284-52b5754f78b2"
+      "source": "https://west.englandhockey.co.uk/fixtures/c9e57245-528b-4d80-a37c-ebb253840b77"
     },
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 3 Oct",
-      "score": "10–0",
-      "opponent": "Caradon W4",
+      "date": "Sat 10 Oct",
+      "score": "14–2",
+      "opponent": "Newquay W3 Dev",
       "venue": "Home",
       "location": "",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/f152d969-e49f-4ce0-a5f1-c0ccc2eef20b"
+      "source": "https://west.englandhockey.co.uk/fixtures/71a52beb-2d61-4cca-911d-c8d5d095fd31"
     },
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 3 Oct",
-      "score": "3–1",
-      "opponent": "St Austell W2 Dev",
+      "date": "Sat 10 Oct",
+      "score": "2–0",
+      "opponent": "Falmouth W4",
       "venue": "Away",
-      "location": "Truro - Penair Secondary School (V)",
+      "location": "Penryn - Penryn College (V)",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/179174a0-45f9-4403-b808-d4aef24955ac"
+      "source": "https://west.englandhockey.co.uk/fixtures/35989853-dcbc-4922-83ed-4520895d8426"
     }
   ]
 }
