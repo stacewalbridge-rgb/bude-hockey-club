@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T20:43:59.897Z",
+  "updated": "2026-10-11T11:35:54.360Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -11,6 +11,15 @@
       "meta": "14:45 • Away • Penryn - Penryn College (V)",
       "location": "Penryn - Penryn College (V)",
       "source": "https://west.englandhockey.co.uk/fixtures/fe0047b5-a7a3-4621-9e65-0931407200c3"
+    },
+    {
+      "team": "Men's Development",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 17 Oct",
+      "fixture": "Bude M2 v Bodmin M3 Dev",
+      "meta": "13:30 • Home",
+      "location": "",
+      "source": "https://west.englandhockey.co.uk/fixtures/dcb6d6d5-2453-440a-9bf1-31c009067906"
     },
     {
       "team": "Ladies 1",
@@ -42,17 +51,6 @@
       "location": "Stoke Damerel Community College",
       "scorers": [],
       "source": "https://west.englandhockey.co.uk/fixtures/c569017d-4775-4999-b602-fa0bb83142ec"
-    },
-    {
-      "team": "Men's Development",
-      "league": "Men's Piran Division 3",
-      "date": "Sat 10 Oct",
-      "score": "1–6",
-      "opponent": "Bodmin M2",
-      "venue": "Home",
-      "location": "",
-      "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/c9e57245-528b-4d80-a37c-ebb253840b77"
     },
     {
       "team": "Ladies 1",
