@@ -1,67 +1,60 @@
 {
-  "updated": "2026-10-17T09:36:29.111Z",
+  "updated": "2026-10-17T19:36:19.342Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 17 Oct",
-      "fixture": "Camborne SoM M1 v Bude M1",
-      "meta": "14:45 • Away • Penryn - Penryn College (V)",
-      "location": "Penryn - Penryn College (V)",
-      "source": "https://west.englandhockey.co.uk/fixtures/fe0047b5-a7a3-4621-9e65-0931407200c3"
-    },
-    {
-      "team": "Men's Development",
-      "league": "Men's Piran Division 3",
-      "date": "Sat 17 Oct",
-      "fixture": "Bude M2 v Bodmin M3 Dev",
+      "date": "Sat 31 Oct",
+      "fixture": "Bude M1 v Duchy M1",
       "meta": "13:30 • Home",
       "location": "",
-      "source": "https://west.englandhockey.co.uk/fixtures/dcb6d6d5-2453-440a-9bf1-31c009067906"
+      "source": "https://west.englandhockey.co.uk/fixtures/98fdce42-d83d-4754-ad01-73efffb57c92"
     },
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 17 Oct",
-      "fixture": "Truro W2 v Bude W1",
-      "meta": "14:30 • Away • Truro - Truro School (V)",
-      "location": "Truro - Truro School (V)",
-      "source": "https://west.englandhockey.co.uk/fixtures/fb38fa27-b2f2-458a-a806-6472deefbfb8"
-    },
-    {
-      "team": "Ladies Development",
-      "league": "Women's Trelawney Division 3",
-      "date": "Sat 17 Oct",
-      "fixture": "Bude W2 Dev v Truro W3",
-      "meta": "12:00 • Home",
-      "location": "",
-      "source": "https://west.englandhockey.co.uk/fixtures/f2a09f66-9730-4b10-8846-d2a8304a6fb8"
+      "date": "Sat 24 Oct",
+      "fixture": "Penzance W3 v Bude W1",
+      "meta": "00:00 • Away • WEST WOMEN NON-LEAGUE MATCHES",
+      "location": "WEST WOMEN NON-LEAGUE MATCHES",
+      "source": "https://west.englandhockey.co.uk/fixtures/4407147f-4ee1-4bf7-8557-f944d82ba891"
     }
   ],
   "results": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 10 Oct",
-      "score": "6–0",
-      "opponent": "Ocean City M3",
+      "date": "Sat 17 Oct",
+      "score": "4–4",
+      "opponent": "Camborne SoM M1",
       "venue": "Away",
-      "location": "Stoke Damerel Community College",
+      "location": "Penryn - Penryn College (V)",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/c569017d-4775-4999-b602-fa0bb83142ec"
+      "source": "https://west.englandhockey.co.uk/fixtures/fe0047b5-a7a3-4621-9e65-0931407200c3"
+    },
+    {
+      "team": "Men's Development",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 17 Oct",
+      "score": "0–2",
+      "opponent": "Bodmin M3 Dev",
+      "venue": "Home",
+      "location": "",
+      "scorers": [],
+      "source": "https://west.englandhockey.co.uk/fixtures/dcb6d6d5-2453-440a-9bf1-31c009067906"
     },
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 10 Oct",
-      "score": "14–2",
-      "opponent": "Newquay W3 Dev",
-      "venue": "Home",
-      "location": "",
+      "date": "Sat 17 Oct",
+      "score": "5–1",
+      "opponent": "Truro W2",
+      "venue": "Away",
+      "location": "Truro - Truro School (V)",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/71a52beb-2d61-4cca-911d-c8d5d095fd31"
+      "source": "https://west.englandhockey.co.uk/fixtures/fb38fa27-b2f2-458a-a806-6472deefbfb8"
     },
     {
       "team": "Ladies Development",
