@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T19:36:19.342Z",
+  "updated": "2026-10-18T09:50:32.723Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -35,17 +35,6 @@
       "source": "https://west.englandhockey.co.uk/fixtures/fe0047b5-a7a3-4621-9e65-0931407200c3"
     },
     {
-      "team": "Men's Development",
-      "league": "Men's Piran Division 3",
-      "date": "Sat 17 Oct",
-      "score": "0–2",
-      "opponent": "Bodmin M3 Dev",
-      "venue": "Home",
-      "location": "",
-      "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/dcb6d6d5-2453-440a-9bf1-31c009067906"
-    },
-    {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
       "date": "Sat 17 Oct",
@@ -59,13 +48,13 @@
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 10 Oct",
-      "score": "2–0",
-      "opponent": "Falmouth W4",
-      "venue": "Away",
-      "location": "Penryn - Penryn College (V)",
+      "date": "Sat 17 Oct",
+      "score": "4–1",
+      "opponent": "Truro W3",
+      "venue": "Home",
+      "location": "",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/35989853-dcbc-4922-83ed-4520895d8426"
+      "source": "https://west.englandhockey.co.uk/fixtures/f2a09f66-9730-4b10-8846-d2a8304a6fb8"
     }
   ]
 }
