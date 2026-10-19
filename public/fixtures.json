@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T11:01:54.473Z",
+  "updated": "2026-10-19T21:43:10.031Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -13,13 +13,31 @@
       "source": "https://west.englandhockey.co.uk/fixtures/98fdce42-d83d-4754-ad01-73efffb57c92"
     },
     {
+      "team": "Men's Development",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 31 Oct",
+      "fixture": "Falmouth M2 v Bude M2",
+      "meta": "15:30 • Away • Penryn - Penryn College (V)",
+      "location": "Penryn - Penryn College (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/76adac2f-5850-476d-a48a-7a35f869e205"
+    },
+    {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 24 Oct",
-      "fixture": "Penzance W3 v Bude W1",
-      "meta": "00:00 • Away • WEST WOMEN NON-LEAGUE MATCHES",
-      "location": "WEST WOMEN NON-LEAGUE MATCHES",
-      "source": "https://west.englandhockey.co.uk/fixtures/4407147f-4ee1-4bf7-8557-f944d82ba891"
+      "date": "Sat 31 Oct",
+      "fixture": "Bude W1 v Falmouth W3",
+      "meta": "12:00 • Home",
+      "location": "",
+      "source": "https://west.englandhockey.co.uk/fixtures/05f29adf-711a-4c13-8ede-4b012ae44c0f"
+    },
+    {
+      "team": "Ladies Development",
+      "league": "Women's Trelawney Division 3",
+      "date": "Sat 31 Oct",
+      "fixture": "Bodmin W2 v Bude W2 Dev",
+      "meta": "12:15 • Away • Bodmin - Dragon Leisure Centre (V)",
+      "location": "Bodmin - Dragon Leisure Centre (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/df8b8670-dccd-46af-a7d9-df595a935979"
     }
   ],
   "results": [
@@ -48,13 +66,13 @@
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 17 Oct",
-      "score": "4–1",
-      "opponent": "Truro W3",
-      "venue": "Home",
-      "location": "",
+      "date": "Sat 10 Oct",
+      "score": "2–0",
+      "opponent": "Falmouth W4",
+      "venue": "Away",
+      "location": "Penryn - Penryn College (V)",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/f2a09f66-9730-4b10-8846-d2a8304a6fb8"
+      "source": "https://west.englandhockey.co.uk/fixtures/35989853-dcbc-4922-83ed-4520895d8426"
     }
   ]
 }
