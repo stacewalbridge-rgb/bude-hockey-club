@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T11:33:36.323Z",
+  "updated": "2026-10-26T21:47:57.872Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -66,13 +66,13 @@
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 3 Oct",
-      "score": "3–1",
-      "opponent": "St Austell W2 Dev",
+      "date": "Sat 10 Oct",
+      "score": "2–0",
+      "opponent": "Falmouth W4",
       "venue": "Away",
-      "location": "Truro - Penair Secondary School (V)",
+      "location": "Penryn - Penryn College (V)",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/179174a0-45f9-4403-b808-d4aef24955ac"
+      "source": "https://west.englandhockey.co.uk/fixtures/35989853-dcbc-4922-83ed-4520895d8426"
     }
   ]
 }
