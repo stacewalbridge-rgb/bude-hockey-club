@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T20:36:50.562Z",
+  "updated": "2026-11-01T12:02:10.495Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -13,6 +13,15 @@
       "source": "https://west.englandhockey.co.uk/fixtures/68631f49-884e-430b-a437-865581a665e0"
     },
     {
+      "team": "Men's Development",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 7 Nov",
+      "fixture": "Bude M2 v Duchy M2",
+      "meta": "12:00 • Home",
+      "location": "",
+      "source": "https://west.englandhockey.co.uk/fixtures/8f0fbfde-91a2-47a7-b775-a12a3ecd6f23"
+    },
+    {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
       "date": "Sat 7 Nov",
@@ -20,6 +29,15 @@
       "meta": "13:00 • Away • Tavistock - Mount Kelly School (V)",
       "location": "Tavistock - Mount Kelly School (V)",
       "source": "https://west.englandhockey.co.uk/fixtures/02839695-1e34-4dfc-96f3-b42c78ba2451"
+    },
+    {
+      "team": "Ladies Development",
+      "league": "Women's Trelawney Division 3",
+      "date": "Sat 7 Nov",
+      "fixture": "Camborne SoM W2 v Bude W2 Dev",
+      "meta": "10:15 • Away • Penryn - Penryn College (V)",
+      "location": "Penryn - Penryn College (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/a5c5fea2-7b15-4269-97a8-fec925d2173c"
     }
   ],
   "results": [
@@ -35,17 +53,6 @@
       "source": "https://west.englandhockey.co.uk/fixtures/98fdce42-d83d-4754-ad01-73efffb57c92"
     },
     {
-      "team": "Men's Development",
-      "league": "Men's Piran Division 3",
-      "date": "Sat 31 Oct",
-      "score": "1–3",
-      "opponent": "Falmouth M2",
-      "venue": "Away",
-      "location": "Penryn - Penryn College (V)",
-      "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/76adac2f-5850-476d-a48a-7a35f869e205"
-    },
-    {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
       "date": "Sat 31 Oct",
@@ -55,17 +62,6 @@
       "location": "",
       "scorers": [],
       "source": "https://west.englandhockey.co.uk/fixtures/05f29adf-711a-4c13-8ede-4b012ae44c0f"
-    },
-    {
-      "team": "Ladies Development",
-      "league": "Women's Trelawney Division 3",
-      "date": "Sat 31 Oct",
-      "score": "2–1",
-      "opponent": "Bodmin W2",
-      "venue": "Away",
-      "location": "Bodmin - Dragon Leisure Centre (V)",
-      "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/df8b8670-dccd-46af-a7d9-df595a935979"
     }
   ]
 }
