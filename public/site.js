@@ -84,6 +84,13 @@ async function loadTeamImagePayload(img){
 }
 document.querySelectorAll('img').forEach(loadTeamImagePayload);
 
+const MATCH_DAY_SPONSORS={
+  '2026-11-14':{name:'Bleujen Florists',url:'https://www.bleujenflorist.com/',logo:null,brand:'BLEUJEN'},
+  '2026-11-28':{name:"Harpers Feeds",url:'https://www.harpersfeeds.co.uk/',logo:null,brand:'HARPERS FEEDS'},
+  '2027-01-16':{name:'Giles & Parsons Farm Vets',url:'https://www.gpfarmvets.co.uk/',logo:'https://static.wixstatic.com/media/00a339_7594e3fe48e847ef92bafb7714a509d6~mv2.png/v1/fill/w_176,h_176,al_c,q_90/Logo.png',brand:'GILES & PARSONS'},
+  '2027-02-06':{name:'Jennings & Company',url:'https://www.jenningsandcompany.co.uk/',logo:null,brand:'JENNINGS & COMPANY'}
+};
+
 async function loadSponsorshipAvailability(){
   const target=document.getElementById('sponsorship-availability');
   if(!target) return;
@@ -108,17 +115,26 @@ async function loadSponsorshipAvailability(){
     target.innerHTML=days.map(day=>{
       const games=Array.isArray(day.matchBallSlots)?day.matchBallSlots:[];
       const full=day.fullMatchDayEligible===true;
+      const sponsor=MATCH_DAY_SPONSORS[day.dateKey];
       const subjectBase=encodeURIComponent('Bude Hockey Club sponsorship – '+day.date);
-      return `<article class="sponsor-date-card">
+      return `<article class="sponsor-date-card ${sponsor?'sponsored-date':''}">
         <div class="sponsor-date-head">
           <div><div class="eyebrow">Available to sponsor</div><h3>${day.date}</h3><div class="sponsor-venue">${day.venue||'Budehaven Astro Turf Pitch'}</div></div>
-          <span class="availability-pill">AVAILABLE</span>
+          ${sponsor
+  ? '<span class="availability-pill sponsored-pill">MATCH DAY SPONSORED</span>'
+  : '<span class="availability-pill">AVAILABLE</span>'}
         </div>
+        ${sponsor?`<a class="assigned-sponsor" href="${sponsor.url}" target="_blank" rel="noreferrer">
+  <div class="assigned-sponsor-logo">${sponsor.logo?`<img src="${sponsor.logo}" alt="${sponsor.name} logo">`:`<span>${sponsor.brand}</span>`}</div>
+  <div><small>Match Day Sponsor</small><strong>${sponsor.name}</strong><span>Visit sponsor website ↗</span></div>
+</a>`:''}
         <div class="home-games-list">
           ${games.map(g=>`<div class="home-game-row"><div><strong>${g.team}</strong><span>${g.fixture}</span></div><b>${g.time||''}</b></div>`).join('')}
         </div>
         <div class="sponsor-options">
-          ${full?`<a class="sponsor-option featured-option" href="mailto:budehockey@gmail.com?subject=${subjectBase}%20-%20Full%20Match%20Day%20%C2%A3360"><strong>Full Match Day</strong><span>£360</span><small>${games.length} home games</small></a>`:''}
+          ${full?(sponsor
+  ? `<div class="sponsor-option featured-option sold-option"><strong>Full Match Day</strong><span>SPONSORED</span><small>by ${sponsor.name}</small></div>`
+  : `<a class="sponsor-option featured-option" href="mailto:budehockey@gmail.com?subject=${subjectBase}%20-%20Full%20Match%20Day%20%C2%A3360"><strong>Full Match Day</strong><span>£360</span><small>${games.length} home games</small></a>`):''}
           <a class="sponsor-option" href="mailto:budehockey@gmail.com?subject=${subjectBase}%20-%20Half%20Match%20Day%20%C2%A3180"><strong>Half Match Day</strong><span>£180</span><small>Enquire for this date</small></a>
           ${games.map(g=>`<a class="sponsor-option ball-option" href="mailto:budehockey@gmail.com?subject=${encodeURIComponent('Match Ball Sponsor £50 – '+day.date+' – '+g.fixture)}"><strong>Match Ball</strong><span>£50</span><small>${g.team} v ${g.fixture.replace(/^.*? v /,'')}</small></a>`).join('')}
         </div>
