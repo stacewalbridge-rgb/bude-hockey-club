@@ -182,7 +182,36 @@ async function main(){
       }
     }
     if(fixtures.length<2) throw new Error(`Only ${fixtures.length} upcoming Bude fixtures parsed; refusing to overwrite the site with incomplete data.`);
-    const payload={updated:new Date().toISOString(),source:SOURCE,automatic:true,fixtures,results};
+
+    const futureHome=parsed
+      .filter(x=>x.dateStamp>=now-6*60*60*1000 && x.budeScore===null && x.isHome)
+      .sort((a,b)=>a.dateStamp-b.dateStamp);
+
+    const byDay=new Map();
+    for(const m of futureHome){
+      const key=new Date(m.dateStamp).toISOString().slice(0,10);
+      if(!byDay.has(key)) byDay.set(key,[]);
+      byDay.get(key).push(m);
+    }
+
+    const sponsorshipDays=[...byDay.entries()].map(([dateKey,games])=>{
+      games.sort((a,b)=>a.dateStamp-b.dateStamp);
+      return {
+        dateKey,
+        date:shortDate(games[0].dateStamp),
+        venue:'Budehaven Astro Turf Pitch',
+        fullMatchDayEligible:games.length>=2,
+        halfMatchDayEligible:true,
+        matchBallSlots:games.map(g=>({
+          team:g.team,
+          fixture:`${g.home} v ${g.away}`,
+          time:g.time,
+          source:g.source
+        }))
+      };
+    });
+
+    const payload={updated:new Date().toISOString(),source:SOURCE,automatic:true,fixtures,results,sponsorshipDays};
     await fs.writeFile(OUT,JSON.stringify(payload,null,2)+'\n','utf8');
     console.log(JSON.stringify(payload,null,2));
   }finally{await browser.close()}
