@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T13:45:05.213Z",
+  "updated": "2026-11-02T14:19:06.671Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -17,8 +17,8 @@
       "league": "Men's Piran Division 3",
       "date": "Sat 7 Nov",
       "fixture": "Bude M2 v Duchy M2",
-      "meta": "12:00 • Home",
-      "location": "",
+      "meta": "12:00 • Home • Budehaven Astro Turf Pitch",
+      "location": "Budehaven Astro Turf Pitch",
       "source": "https://west.englandhockey.co.uk/fixtures/8f0fbfde-91a2-47a7-b775-a12a3ecd6f23"
     },
     {
@@ -29,15 +29,6 @@
       "meta": "13:00 • Away • Tavistock - Mount Kelly School (V)",
       "location": "Tavistock - Mount Kelly School (V)",
       "source": "https://west.englandhockey.co.uk/fixtures/02839695-1e34-4dfc-96f3-b42c78ba2451"
-    },
-    {
-      "team": "Ladies Development",
-      "league": "Women's Trelawney Division 3",
-      "date": "Sat 7 Nov",
-      "fixture": "Camborne SoM W2 v Bude W2 Dev",
-      "meta": "10:15 • Away • Penryn - Penryn College (V)",
-      "location": "Penryn - Penryn College (V)",
-      "source": "https://west.englandhockey.co.uk/fixtures/a5c5fea2-7b15-4269-97a8-fec925d2173c"
     }
   ],
   "results": [
@@ -48,7 +39,7 @@
       "score": "2–4",
       "opponent": "Duchy M1",
       "venue": "Home",
-      "location": "",
+      "location": "Budehaven Astro Turf Pitch",
       "scorers": [],
       "source": "https://west.englandhockey.co.uk/fixtures/98fdce42-d83d-4754-ad01-73efffb57c92"
     },
@@ -59,7 +50,7 @@
       "score": "4–2",
       "opponent": "Falmouth W3",
       "venue": "Home",
-      "location": "",
+      "location": "Budehaven Astro Turf Pitch",
       "scorers": [],
       "source": "https://west.englandhockey.co.uk/fixtures/05f29adf-711a-4c13-8ede-4b012ae44c0f"
     }
