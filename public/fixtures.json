@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T14:19:06.671Z",
+  "updated": "2026-11-02T15:22:12.995Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -29,6 +29,15 @@
       "meta": "13:00 • Away • Tavistock - Mount Kelly School (V)",
       "location": "Tavistock - Mount Kelly School (V)",
       "source": "https://west.englandhockey.co.uk/fixtures/02839695-1e34-4dfc-96f3-b42c78ba2451"
+    },
+    {
+      "team": "Ladies Development",
+      "league": "Women's Trelawney Division 3",
+      "date": "Sat 7 Nov",
+      "fixture": "Camborne SoM W2 v Bude W2 Dev",
+      "meta": "10:15 • Away • Penryn - Penryn College (V)",
+      "location": "Penryn - Penryn College (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/a5c5fea2-7b15-4269-97a8-fec925d2173c"
     }
   ],
   "results": [
@@ -53,6 +62,203 @@
       "location": "Budehaven Astro Turf Pitch",
       "scorers": [],
       "source": "https://west.englandhockey.co.uk/fixtures/05f29adf-711a-4c13-8ede-4b012ae44c0f"
+    }
+  ],
+  "sponsorshipDays": [
+    {
+      "dateKey": "2026-11-07",
+      "date": "Sat 7 Nov",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": false,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Men's Development",
+          "fixture": "Bude M2 v Duchy M2",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/8f0fbfde-91a2-47a7-b775-a12a3ecd6f23"
+        }
+      ]
+    },
+    {
+      "dateKey": "2026-11-14",
+      "date": "Sat 14 Nov",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": true,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Penzance W3",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/752d9eb1-96e5-49e6-9586-bcfdbe7de317"
+        },
+        {
+          "team": "Bude M1",
+          "fixture": "Bude M1 v Devonport Services M1",
+          "time": "15:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/e8f2d6bb-6df6-4b93-be86-66d0fdc012d2"
+        }
+      ]
+    },
+    {
+      "dateKey": "2026-11-28",
+      "date": "Sat 28 Nov",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": true,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Caradon W4",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/30d7324f-c74e-4fe8-a62f-c8f61419e1d0"
+        },
+        {
+          "team": "Bude M1",
+          "fixture": "Bude M1 v Truro M3",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/e94e7d21-55eb-4be8-8eb3-5a68ac712b8a"
+        }
+      ]
+    },
+    {
+      "dateKey": "2026-12-05",
+      "date": "Sat 5 Dec",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": false,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Newquay W3 Dev",
+          "time": "15:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/dd3f876b-a931-4fd8-b72c-3c3bb12856bd"
+        }
+      ]
+    },
+    {
+      "dateKey": "2027-01-09",
+      "date": "Sat 9 Jan",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": false,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Caradon W3",
+          "time": "00:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/85f3521d-82a9-44e6-87ed-4fcd589cf607"
+        }
+      ]
+    },
+    {
+      "dateKey": "2027-01-16",
+      "date": "Sat 16 Jan",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": true,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Duchy W2",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/73469ca1-1998-49e6-b10c-8a4e65dcc3be"
+        },
+        {
+          "team": "Bude M1",
+          "fixture": "Bude M1 v Bodmin M1",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/971c7ab3-68ab-455a-9373-9a54bf0b9329"
+        }
+      ]
+    },
+    {
+      "dateKey": "2027-01-30",
+      "date": "Sat 30 Jan",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": false,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Bude M1",
+          "fixture": "Bude M1 v Ocean City M3",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/7e112019-35e3-4d16-911b-f494893a779b"
+        }
+      ]
+    },
+    {
+      "dateKey": "2027-02-06",
+      "date": "Sat 6 Feb",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": true,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Truro W2",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/e2eb6d7f-1e2d-4f49-9286-ea43ba8bb4a9"
+        },
+        {
+          "team": "Bude M1",
+          "fixture": "Bude M1 v Camborne SoM M1",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/2ce2fdf0-a409-48af-a3b8-d6845cc2279b"
+        }
+      ]
+    },
+    {
+      "dateKey": "2027-02-27",
+      "date": "Sat 27 Feb",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": true,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Tavistock & Launceston W2",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/1addd259-4cf2-482f-8424-341ca06d1173"
+        },
+        {
+          "team": "Bude M1",
+          "fixture": "Bude M1 v Ocean City M2",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/2b488e3a-b788-4056-b7f6-3815f33b2328"
+        }
+      ]
+    },
+    {
+      "dateKey": "2027-03-20",
+      "date": "Sat 20 Mar",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": false,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Bude M1",
+          "fixture": "Bude M1 v Duchy M1",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/55029d7c-834d-4e40-9892-4b341374ca95"
+        }
+      ]
+    },
+    {
+      "dateKey": "2027-04-10",
+      "date": "Sat 10 Apr",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": false,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Bude M1",
+          "fixture": "Bude M1 v Devonport Services M1",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/d56d4798-1a60-4afd-b21c-77107d581228"
+        }
+      ]
     }
   ]
 }
