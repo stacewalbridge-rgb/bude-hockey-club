@@ -83,3 +83,55 @@ async function loadTeamImagePayload(img){
   }catch(e){console.warn('Team image upgrade failed:',raw,e);}
 }
 document.querySelectorAll('img').forEach(loadTeamImagePayload);
+
+async function loadSponsorshipAvailability(){
+  const target=document.getElementById('sponsorship-availability');
+  if(!target) return;
+  try{
+    const res=await fetch('/fixtures.json',{cache:'no-store'});
+    if(!res.ok) throw new Error('fixtures '+res.status);
+    const data=await res.json();
+    let days=Array.isArray(data.sponsorshipDays)?data.sponsorshipDays:[];
+    if(!days.length && Array.isArray(data.fixtures)){
+      const grouped={};
+      data.fixtures.filter(f=>(f.meta||'').toLowerCase().includes('home')).forEach(f=>{
+        const key=f.date||'Upcoming home game';
+        grouped[key]=grouped[key]||{date:key,venue:'Budehaven Astro Turf Pitch',fullMatchDayEligible:false,halfMatchDayEligible:true,matchBallSlots:[]};
+        grouped[key].matchBallSlots.push({team:f.team,fixture:f.fixture,time:(f.meta||'').split(' • ')[0],source:f.source});
+      });
+      days=Object.values(grouped);
+    }
+    if(!days.length){
+      target.innerHTML='<div class="sponsor-empty">No future Bude home fixtures are currently available in the England Hockey feed. Please contact the club for later dates.</div>';
+      return;
+    }
+    target.innerHTML=days.map(day=>{
+      const games=Array.isArray(day.matchBallSlots)?day.matchBallSlots:[];
+      const full=day.fullMatchDayEligible===true;
+      const subjectBase=encodeURIComponent('Bude Hockey Club sponsorship – '+day.date);
+      return `<article class="sponsor-date-card">
+        <div class="sponsor-date-head">
+          <div><div class="eyebrow">Available to sponsor</div><h3>${day.date}</h3><div class="sponsor-venue">${day.venue||'Budehaven Astro Turf Pitch'}</div></div>
+          <span class="availability-pill">AVAILABLE</span>
+        </div>
+        <div class="home-games-list">
+          ${games.map(g=>`<div class="home-game-row"><div><strong>${g.team}</strong><span>${g.fixture}</span></div><b>${g.time||''}</b></div>`).join('')}
+        </div>
+        <div class="sponsor-options">
+          ${full?`<a class="sponsor-option featured-option" href="mailto:budehockey@gmail.com?subject=${subjectBase}%20-%20Full%20Match%20Day%20%C2%A3360"><strong>Full Match Day</strong><span>£360</span><small>${games.length} home games</small></a>`:''}
+          <a class="sponsor-option" href="mailto:budehockey@gmail.com?subject=${subjectBase}%20-%20Half%20Match%20Day%20%C2%A3180"><strong>Half Match Day</strong><span>£180</span><small>Enquire for this date</small></a>
+          ${games.map(g=>`<a class="sponsor-option ball-option" href="mailto:budehockey@gmail.com?subject=${encodeURIComponent('Match Ball Sponsor £50 – '+day.date+' – '+g.fixture)}"><strong>Match Ball</strong><span>£50</span><small>${g.team} v ${g.fixture.replace(/^.*? v /,'')}</small></a>`).join('')}
+        </div>
+      </article>`;
+    }).join('');
+    const first=days[0], game=first?.matchBallSlots?.[0];
+    const md=document.getElementById('sponsor-mock-date');
+    const mf=document.getElementById('sponsor-mock-fixture');
+    if(md) md.textContent=first?.date||'BUDE HOME MATCH DAY';
+    if(mf) mf.textContent=game?.fixture||'BUDE HOCKEY CLUB • HOME FIXTURE';
+  }catch(e){
+    console.warn('Sponsorship availability failed',e);
+    target.innerHTML='<div class="sponsor-empty">Sponsorship dates are being updated from England Hockey.</div>';
+  }
+}
+loadSponsorshipAvailability();
