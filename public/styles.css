@@ -78,3 +78,20 @@
 .people-tags span{display:inline-flex;padding:10px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:800;color:var(--navy)}
 @media(max-width:960px){.info-grid,.policy-grid,.resource-grid,.tournament-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.info-grid,.policy-grid,.resource-grid,.tournament-grid{grid-template-columns:1fr}}
+
+/* News, gallery, socials and fundraising */
+.news-grid,.event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.news-card,.event-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 10px 28px rgba(20,69,96,.06)}
+.news-card.featured{background:linear-gradient(145deg,#f6fcff,#fff8e2);border-color:#d8c36a}
+.news-kicker{text-transform:uppercase;font-size:.72rem;letter-spacing:.12em;font-weight:950;color:var(--burg);margin-bottom:7px}
+.news-card h3,.event-card h3{margin:.1em 0 .35em;color:var(--navy)}
+.news-card p,.event-card p{color:var(--muted)}
+.event-icon{font-size:1.8rem;margin-bottom:8px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:210px;gap:14px}
+.gallery-tile{position:relative;margin:0;overflow:hidden;border-radius:20px;background:#e9f5fa;border:1px solid var(--line);box-shadow:0 10px 24px rgba(20,69,96,.06)}
+.gallery-tile.gallery-large{grid-column:span 2;grid-row:span 2}
+.gallery-tile img{width:100%;height:100%;object-fit:cover}
+.gallery-tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(14,45,68,.82));color:#fff;font-weight:900}
+.gallery-note{margin-top:16px;color:var(--muted);font-size:.9rem}
+@media(max-width:960px){.news-grid,.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:190px}}
+@media(max-width:640px){.news-grid,.event-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr;grid-auto-rows:auto}.gallery-tile,.gallery-tile.gallery-large{grid-column:auto;grid-row:auto}.gallery-tile img{aspect-ratio:4/3}}
