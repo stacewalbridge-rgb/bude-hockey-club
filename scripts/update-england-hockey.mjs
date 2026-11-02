@@ -164,8 +164,8 @@ async function main(){
         fixtures.push({
           team:next.team,league:next.league,date:next.date,
           fixture:`${next.home} v ${next.away}`,
-          meta:[next.time,next.isHome?'Home':'Away',next.venue].filter(Boolean).join(' • '),
-          location:next.venue,source:next.source
+          meta:[next.time,next.isHome?'Home':'Away',next.isHome?'Budehaven Astro Turf Pitch':next.venue].filter(Boolean).join(' • '),
+          location:next.isHome?'Budehaven Astro Turf Pitch':next.venue,source:next.source
         });
       }
       const previous=teamMatches.filter(x=>x.dateStamp<now && x.budeScore!==null).sort((a,b)=>b.dateStamp-a.dateStamp)[0];
@@ -175,7 +175,7 @@ async function main(){
           score:`${previous.budeScore}–${previous.oppScore}`,
           opponent:previous.opponent,
           venue:previous.isHome?'Home':'Away',
-          location:previous.venue,
+          location:previous.isHome?'Budehaven Astro Turf Pitch':previous.venue,
           scorers:previous.scorers||[],
           source:previous.source
         });
