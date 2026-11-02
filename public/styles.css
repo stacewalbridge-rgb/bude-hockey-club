@@ -152,3 +152,26 @@
 .sold-option{cursor:default}
 .sold-option span{font-size:1.05rem;color:#8a6700}
 @media(max-width:640px){.assigned-sponsor{align-items:flex-start}.assigned-sponsor-logo{width:76px;height:62px}}
+
+/* Published club documents */
+.live-doc{display:block;text-decoration:none;position:relative;overflow:hidden}
+.live-doc:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(20,69,96,.10)}
+.doc-status{display:inline-flex;padding:6px 9px;border-radius:999px;background:#e9f8eb;border:1px solid #a9d9b0;color:#27713a;font-size:.7rem;font-weight:950;letter-spacing:.08em;margin-bottom:12px}
+.safeguarding-card .doc-status{background:#eef8ff;border-color:#b8ddec;color:#1d6481}
+.doc-open{display:inline-block;margin-top:14px;color:var(--burg);font-weight:900}
+.rules-section{background:linear-gradient(180deg,#fff,#f8fcfe)}
+.rules-feature{border:2px solid var(--gold);background:#fffdf2}
+.rules-note{margin-top:18px;padding:16px 18px;border-radius:16px;background:#f5fafc;border:1px solid #dcebf1;color:var(--muted)}
+.document-wrap{max-width:930px}
+.doc-note{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:18px;background:#fff7cf;border:1px solid #ead26c;margin-bottom:20px}
+.doc-note strong{color:#775a00;white-space:nowrap}.doc-note span{color:#5f5b48}
+.safeguarding-note{background:#eef9ff;border-color:#b9deed}.safeguarding-note strong{color:#155a78}
+.document-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,42px);box-shadow:0 16px 38px rgba(20,69,96,.07)}
+.document-card h2{font-size:1.55rem;color:var(--navy);margin:2.2rem 0 .8rem;padding-top:.35rem;border-top:1px solid #edf3f6}
+.document-card h2:first-child{margin-top:0;border-top:0;padding-top:0}
+.document-card h3{font-size:1.08rem;color:var(--burg);margin:1.25rem 0 .5rem}
+.document-card p,.document-card li{color:#41596a;line-height:1.72}
+.document-card ul{padding-left:1.3rem}
+.document-card li+li{margin-top:.4rem}
+.doc-back{margin-top:22px}
+@media(max-width:640px){.doc-note{display:block}.doc-note strong{display:block;margin-bottom:5px}.document-card{border-radius:18px}}
