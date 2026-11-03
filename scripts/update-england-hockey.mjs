@@ -6,7 +6,7 @@ const OUT=new URL('../public/fixtures.json',import.meta.url);
 
 const TEAMS=[
   {key:'m1',name:'Bude M1',aliases:['Bude M1'],url:'https://west.englandhockey.co.uk/teams/bude-m1-mens'},
-  {key:'m2',name:"Men's Development",aliases:['Bude M2 Dev','Bude M2'],url:'https://west.englandhockey.co.uk/teams/bude-m2-dev-mens'},
+  {key:'m2',name:"Bude Men's 2nd Team",aliases:['Bude M2 Dev','Bude M2'],url:'https://west.englandhockey.co.uk/teams/bude-m2-dev-mens'},
   {key:'w1',name:'Ladies 1',aliases:['Bude W1'],url:'https://west.englandhockey.co.uk/teams/bude-w1-womens'},
   {key:'w2',name:'Ladies Development',aliases:['Bude W2 Dev','Bude W2'],url:'https://west.englandhockey.co.uk/teams/bude-w2-dev-womens'}
 ];
