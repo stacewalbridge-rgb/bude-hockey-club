@@ -1,0 +1,51 @@
+name: Publish social media news
+on:
+  repository_dispatch:
+    types: [club_social_post]
+  workflow_dispatch:
+    inputs:
+      source:
+        description: facebook or instagram
+        required: true
+        type: choice
+        options: [facebook, instagram]
+      post_id:
+        description: Unique ID of social post
+        required: true
+      text:
+        description: Post caption or report
+        required: true
+      image_url:
+        description: Public photo URL (optional)
+        required: false
+      post_url:
+        description: Original social post link
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: social-post-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Add social post
+        env:
+          POST_SOURCE: ${{ github.event.client_payload.source || inputs.source }}
+          POST_ID: ${{ github.event.client_payload.post_id || inputs.post_id }}
+          POST_TEXT: ${{ github.event.client_payload.text || inputs.text }}
+          POST_IMAGE_URL: ${{ github.event.client_payload.image_url || inputs.image_url }}
+          POST_URL: ${{ github.event.client_payload.post_url || inputs.post_url }}
+          POST_DATE: ${{ github.event.client_payload.date }}
+        run: python scripts/ingest_social.py
+      - name: Commit updated news
+        run: |
+          git config user.name "bude-hockey-social-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/social-posts.json
+          if ! git diff --cached --quiet; then git commit -m "Publish social media news"; git pull --rebase; git push; fi
