@@ -13,7 +13,7 @@ date=os.environ.get("POST_DATE","").strip() or datetime.datetime.now(datetime.ti
 if not body and not image:raise ValueError("No content")
 def category(s):
  s=s.lower()
- if re.search(r"\\b(u8|u10|u12|u14|under 8|under 10|under 12|under 14|juniors?)\\b",s):return "Juniors"
+ if re.search(r"\b(u8|u10|u12|u14|under 8|under 10|under 12|under 14|juniors?)\b",s):return "Juniors"
  if re.search(r"ladies.{0,18}(1st|first|1s)",s):return "Ladies 1st Team"
  if re.search(r"ladies.{0,18}(development|dev)",s):return "Ladies Development"
  if re.search(r"men.{0,18}(2nd|second|2s)",s):return "Mens 2nd Team"
