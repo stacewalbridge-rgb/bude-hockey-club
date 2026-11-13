@@ -1,85 +1,92 @@
 {
-  "updated": "2026-11-04T22:47:31.807Z",
+  "updated": "2026-11-13T09:16:37.790Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 7 Nov",
-      "fixture": "Ocean City M2 v Bude M1",
-      "meta": "11:00 • Away • Stoke Damerel Community College",
-      "location": "Stoke Damerel Community College",
-      "source": "https://west.englandhockey.co.uk/fixtures/68631f49-884e-430b-a437-865581a665e0"
+      "date": "Sat 14 Nov",
+      "fixture": "Bude M1 v Devonport Services M1",
+      "meta": "15:00 • Home • Budehaven Astro Turf Pitch",
+      "location": "Budehaven Astro Turf Pitch",
+      "source": "https://west.englandhockey.co.uk/fixtures/e8f2d6bb-6df6-4b93-be86-66d0fdc012d2"
     },
     {
       "team": "Bude Men's 2nd Team",
       "league": "Men's Piran Division 3",
-      "date": "Sat 7 Nov",
-      "fixture": "Bude M2 v Duchy M2",
-      "meta": "12:00 • Home • Budehaven Astro Turf Pitch",
-      "location": "Budehaven Astro Turf Pitch",
-      "source": "https://west.englandhockey.co.uk/fixtures/8f0fbfde-91a2-47a7-b775-a12a3ecd6f23"
+      "date": "Sat 14 Nov",
+      "fixture": "Caradon M3 Dev v Bude M2",
+      "meta": "14:00 • Away • Liskeard - Liskeard Leisure Centre (V)",
+      "location": "Liskeard - Liskeard Leisure Centre (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/95332b52-d9fe-4be3-a468-5b1719ac5109"
     },
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 7 Nov",
-      "fixture": "Tavistock & Launceston W2 v Bude W1",
-      "meta": "13:00 • Away • Tavistock - Mount Kelly School (V)",
-      "location": "Tavistock - Mount Kelly School (V)",
-      "source": "https://west.englandhockey.co.uk/fixtures/02839695-1e34-4dfc-96f3-b42c78ba2451"
+      "date": "Sat 14 Nov",
+      "fixture": "Bude W1 v Penzance W3",
+      "meta": "13:30 • Home • Budehaven Astro Turf Pitch",
+      "location": "Budehaven Astro Turf Pitch",
+      "source": "https://west.englandhockey.co.uk/fixtures/752d9eb1-96e5-49e6-9586-bcfdbe7de317"
     },
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 7 Nov",
-      "fixture": "Camborne SoM W2 v Bude W2 Dev",
-      "meta": "10:15 • Away • Penryn - Penryn College (V)",
-      "location": "Penryn - Penryn College (V)",
-      "source": "https://west.englandhockey.co.uk/fixtures/a5c5fea2-7b15-4269-97a8-fec925d2173c"
+      "date": "Sat 14 Nov",
+      "fixture": "Bude W2 Dev v St Austell W2 Dev",
+      "meta": "12:00 • Home • Budehaven Astro Turf Pitch",
+      "location": "Budehaven Astro Turf Pitch",
+      "source": "https://west.englandhockey.co.uk/fixtures/5e4de2f1-1702-416a-b7dc-5cab08ba0caf"
     }
   ],
   "results": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 31 Oct",
-      "score": "2–4",
-      "opponent": "Duchy M1",
+      "date": "Sat 7 Nov",
+      "score": "2–6",
+      "opponent": "Ocean City M2",
       "venue": "Away",
-      "location": "",
+      "location": "Stoke Damerel Community College",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/98fdce42-d83d-4754-ad01-73efffb57c92"
+      "source": "https://west.englandhockey.co.uk/fixtures/68631f49-884e-430b-a437-865581a665e0"
+    },
+    {
+      "team": "Bude Men's 2nd Team",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 7 Nov",
+      "score": "0–6",
+      "opponent": "Duchy M2",
+      "venue": "Home",
+      "location": "Budehaven Astro Turf Pitch",
+      "scorers": [],
+      "source": "https://west.englandhockey.co.uk/fixtures/8f0fbfde-91a2-47a7-b775-a12a3ecd6f23"
     },
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 31 Oct",
-      "score": "4–2",
-      "opponent": "Falmouth W3",
+      "date": "Sat 7 Nov",
+      "score": "9–1",
+      "opponent": "Tavistock & Launceston W2",
       "venue": "Away",
-      "location": "",
+      "location": "Tavistock - Mount Kelly School (V)",
       "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/05f29adf-711a-4c13-8ede-4b012ae44c0f"
+      "source": "https://west.englandhockey.co.uk/fixtures/02839695-1e34-4dfc-96f3-b42c78ba2451"
+    },
+    {
+      "team": "Ladies Development",
+      "league": "Women's Trelawney Division 3",
+      "date": "Sat 7 Nov",
+      "score": "2–0",
+      "opponent": "Camborne SoM W2",
+      "venue": "Away",
+      "location": "Penryn - Penryn College (V)",
+      "scorers": [],
+      "source": "https://west.englandhockey.co.uk/fixtures/a5c5fea2-7b15-4269-97a8-fec925d2173c"
     }
   ],
   "sponsorshipDays": [
-    {
-      "dateKey": "2026-11-07",
-      "date": "Sat 7 Nov",
-      "venue": "Budehaven Astro Turf Pitch",
-      "fullMatchDayEligible": false,
-      "halfMatchDayEligible": true,
-      "matchBallSlots": [
-        {
-          "team": "Bude Men's 2nd Team",
-          "fixture": "Bude M2 v Duchy M2",
-          "time": "12:00",
-          "source": "https://west.englandhockey.co.uk/fixtures/8f0fbfde-91a2-47a7-b775-a12a3ecd6f23"
-        }
-      ]
-    },
     {
       "dateKey": "2026-11-14",
       "date": "Sat 14 Nov",
@@ -87,6 +94,12 @@
       "fullMatchDayEligible": true,
       "halfMatchDayEligible": true,
       "matchBallSlots": [
+        {
+          "team": "Ladies Development",
+          "fixture": "Bude W2 Dev v St Austell W2 Dev",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/5e4de2f1-1702-416a-b7dc-5cab08ba0caf"
+        },
         {
           "team": "Ladies 1",
           "fixture": "Bude W1 v Penzance W3",
@@ -98,6 +111,21 @@
           "fixture": "Bude M1 v Devonport Services M1",
           "time": "15:00",
           "source": "https://west.englandhockey.co.uk/fixtures/e8f2d6bb-6df6-4b93-be86-66d0fdc012d2"
+        }
+      ]
+    },
+    {
+      "dateKey": "2026-11-21",
+      "date": "Sat 21 Nov",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": false,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies Development",
+          "fixture": "Bude W2 Dev v Falmouth W4",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/3bf26adc-29ac-4bce-917f-5c58c6cdeb87"
         }
       ]
     },
@@ -126,9 +154,15 @@
       "dateKey": "2026-12-05",
       "date": "Sat 5 Dec",
       "venue": "Budehaven Astro Turf Pitch",
-      "fullMatchDayEligible": false,
+      "fullMatchDayEligible": true,
       "halfMatchDayEligible": true,
       "matchBallSlots": [
+        {
+          "team": "Ladies Development",
+          "fixture": "Bude W2 Dev v Bodmin W2",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/2bdeeb40-6436-4b10-a6fb-32f4226f8b79"
+        },
         {
           "team": "Ladies 1",
           "fixture": "Bude W1 v Newquay W3 Dev",
@@ -174,12 +208,33 @@
       ]
     },
     {
-      "dateKey": "2027-01-30",
-      "date": "Sat 30 Jan",
+      "dateKey": "2027-01-23",
+      "date": "Sat 23 Jan",
       "venue": "Budehaven Astro Turf Pitch",
       "fullMatchDayEligible": false,
       "halfMatchDayEligible": true,
       "matchBallSlots": [
+        {
+          "team": "Ladies Development",
+          "fixture": "Bude W2 Dev v St Austell W2 Dev",
+          "time": "00:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/76b0ccee-a60d-4cbf-ba0a-b4faef28f27c"
+        }
+      ]
+    },
+    {
+      "dateKey": "2027-01-30",
+      "date": "Sat 30 Jan",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": true,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies Development",
+          "fixture": "Bude W2 Dev v Falmouth W4",
+          "time": "00:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/f6c0a90d-897b-4a7f-b108-3a8c72bc8497"
+        },
         {
           "team": "Bude M1",
           "fixture": "Bude M1 v Ocean City M3",
@@ -210,12 +265,33 @@
       ]
     },
     {
+      "dateKey": "2027-02-20",
+      "date": "Sat 20 Feb",
+      "venue": "Budehaven Astro Turf Pitch",
+      "fullMatchDayEligible": false,
+      "halfMatchDayEligible": true,
+      "matchBallSlots": [
+        {
+          "team": "Ladies Development",
+          "fixture": "Bude W2 Dev v Bodmin W2",
+          "time": "00:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/7c3a950c-3af5-43a6-a8e5-cee37ee27d7f"
+        }
+      ]
+    },
+    {
       "dateKey": "2027-02-27",
       "date": "Sat 27 Feb",
       "venue": "Budehaven Astro Turf Pitch",
       "fullMatchDayEligible": true,
       "halfMatchDayEligible": true,
       "matchBallSlots": [
+        {
+          "team": "Ladies Development",
+          "fixture": "Bude W2 Dev v Camborne SoM W2",
+          "time": "00:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/76aff4af-0cca-4930-b846-38e75142045c"
+        },
         {
           "team": "Ladies 1",
           "fixture": "Bude W1 v Tavistock & Launceston W2",
@@ -234,9 +310,21 @@
       "dateKey": "2027-03-20",
       "date": "Sat 20 Mar",
       "venue": "Budehaven Astro Turf Pitch",
-      "fullMatchDayEligible": false,
+      "fullMatchDayEligible": true,
       "halfMatchDayEligible": true,
       "matchBallSlots": [
+        {
+          "team": "Ladies Development",
+          "fixture": "Bude W2 Dev v Truro W3",
+          "time": "00:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/2ae95103-17e5-4e6a-9550-476b90cc625f"
+        },
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Falmouth W3",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/fc25f5ff-549f-4245-9a55-eb4370baf607"
+        },
         {
           "team": "Bude M1",
           "fixture": "Bude M1 v Duchy M1",
@@ -249,9 +337,15 @@
       "dateKey": "2027-04-10",
       "date": "Sat 10 Apr",
       "venue": "Budehaven Astro Turf Pitch",
-      "fullMatchDayEligible": false,
+      "fullMatchDayEligible": true,
       "halfMatchDayEligible": true,
       "matchBallSlots": [
+        {
+          "team": "Ladies 1",
+          "fixture": "Bude W1 v Penzance W3",
+          "time": "12:00",
+          "source": "https://west.englandhockey.co.uk/fixtures/ac5e78a6-edc3-4fd7-974e-93dfa235b776"
+        },
         {
           "team": "Bude M1",
           "fixture": "Bude M1 v Devonport Services M1",
@@ -260,5 +354,74 @@
         }
       ]
     }
+  ],
+  "knownFixtures": [
+    "https://west.englandhockey.co.uk/fixtures/02839695-1e34-4dfc-96f3-b42c78ba2451",
+    "https://west.englandhockey.co.uk/fixtures/05f29adf-711a-4c13-8ede-4b012ae44c0f",
+    "https://west.englandhockey.co.uk/fixtures/15b876bc-3214-4d18-8768-b92e15d289ea",
+    "https://west.englandhockey.co.uk/fixtures/179174a0-45f9-4403-b808-d4aef24955ac",
+    "https://west.englandhockey.co.uk/fixtures/17eb5d51-e829-49ef-a295-911699e1db4b",
+    "https://west.englandhockey.co.uk/fixtures/1addd259-4cf2-482f-8424-341ca06d1173",
+    "https://west.englandhockey.co.uk/fixtures/1f5bda39-e5c2-4946-a25e-a25365b0c584",
+    "https://west.englandhockey.co.uk/fixtures/2ae95103-17e5-4e6a-9550-476b90cc625f",
+    "https://west.englandhockey.co.uk/fixtures/2b488e3a-b788-4056-b7f6-3815f33b2328",
+    "https://west.englandhockey.co.uk/fixtures/2bdeeb40-6436-4b10-a6fb-32f4226f8b79",
+    "https://west.englandhockey.co.uk/fixtures/2ce2fdf0-a409-48af-a3b8-d6845cc2279b",
+    "https://west.englandhockey.co.uk/fixtures/30d7324f-c74e-4fe8-a62f-c8f61419e1d0",
+    "https://west.englandhockey.co.uk/fixtures/35989853-dcbc-4922-83ed-4520895d8426",
+    "https://west.englandhockey.co.uk/fixtures/3bf26adc-29ac-4bce-917f-5c58c6cdeb87",
+    "https://west.englandhockey.co.uk/fixtures/3c1a0bec-2395-4db8-9a01-43d7b9653768",
+    "https://west.englandhockey.co.uk/fixtures/4407147f-4ee1-4bf7-8557-f944d82ba891",
+    "https://west.englandhockey.co.uk/fixtures/463a8b4b-0dbd-47d5-a32f-f3542e64a816",
+    "https://west.englandhockey.co.uk/fixtures/4740f7da-4b05-4b40-96d9-d2b87ea55cce",
+    "https://west.englandhockey.co.uk/fixtures/55029d7c-834d-4e40-9892-4b341374ca95",
+    "https://west.englandhockey.co.uk/fixtures/5e4de2f1-1702-416a-b7dc-5cab08ba0caf",
+    "https://west.englandhockey.co.uk/fixtures/60558556-2492-4f36-bc65-81c3f5d670ee",
+    "https://west.englandhockey.co.uk/fixtures/68631f49-884e-430b-a437-865581a665e0",
+    "https://west.englandhockey.co.uk/fixtures/71a52beb-2d61-4cca-911d-c8d5d095fd31",
+    "https://west.englandhockey.co.uk/fixtures/73469ca1-1998-49e6-b10c-8a4e65dcc3be",
+    "https://west.englandhockey.co.uk/fixtures/752d9eb1-96e5-49e6-9586-bcfdbe7de317",
+    "https://west.englandhockey.co.uk/fixtures/76aff4af-0cca-4930-b846-38e75142045c",
+    "https://west.englandhockey.co.uk/fixtures/76b0ccee-a60d-4cbf-ba0a-b4faef28f27c",
+    "https://west.englandhockey.co.uk/fixtures/7c3a950c-3af5-43a6-a8e5-cee37ee27d7f",
+    "https://west.englandhockey.co.uk/fixtures/7e112019-35e3-4d16-911b-f494893a779b",
+    "https://west.englandhockey.co.uk/fixtures/82642111-edb5-4e36-a1fe-5c19886142b2",
+    "https://west.englandhockey.co.uk/fixtures/85f3521d-82a9-44e6-87ed-4fcd589cf607",
+    "https://west.englandhockey.co.uk/fixtures/8f0fbfde-91a2-47a7-b775-a12a3ecd6f23",
+    "https://west.englandhockey.co.uk/fixtures/95332b52-d9fe-4be3-a468-5b1719ac5109",
+    "https://west.englandhockey.co.uk/fixtures/969eb619-0fdd-4319-8f02-3bae6c3c2056",
+    "https://west.englandhockey.co.uk/fixtures/971c7ab3-68ab-455a-9373-9a54bf0b9329",
+    "https://west.englandhockey.co.uk/fixtures/98a5a33f-1c55-467d-a7dd-22c0db75064e",
+    "https://west.englandhockey.co.uk/fixtures/98fdce42-d83d-4754-ad01-73efffb57c92",
+    "https://west.englandhockey.co.uk/fixtures/9919a90e-793f-4e5d-b198-4e39fda9235c",
+    "https://west.englandhockey.co.uk/fixtures/9f6bb551-0de8-4697-94d0-e6fb40d482e8",
+    "https://west.englandhockey.co.uk/fixtures/a5c5fea2-7b15-4269-97a8-fec925d2173c",
+    "https://west.englandhockey.co.uk/fixtures/ac5e78a6-edc3-4fd7-974e-93dfa235b776",
+    "https://west.englandhockey.co.uk/fixtures/b0c892cb-5b0b-4491-ad7b-c2ba28deda63",
+    "https://west.englandhockey.co.uk/fixtures/b4721c2a-4f7d-44e1-bce5-87ede34eb9fd",
+    "https://west.englandhockey.co.uk/fixtures/b8aa6796-e782-4361-acdf-9ce8c183e4df",
+    "https://west.englandhockey.co.uk/fixtures/bbe92079-de78-489a-ba3c-8f8fd770da49",
+    "https://west.englandhockey.co.uk/fixtures/bf79d6d0-67c1-478b-a284-52b5754f78b2",
+    "https://west.englandhockey.co.uk/fixtures/c569017d-4775-4999-b602-fa0bb83142ec",
+    "https://west.englandhockey.co.uk/fixtures/c5d40c96-acb6-4655-8241-cee6244b435d",
+    "https://west.englandhockey.co.uk/fixtures/cf8055a7-fa8b-4b03-bd09-a01fccc78470",
+    "https://west.englandhockey.co.uk/fixtures/d50ec0dd-5109-45fb-b3d0-199b3dadadd8",
+    "https://west.englandhockey.co.uk/fixtures/d56d4798-1a60-4afd-b21c-77107d581228",
+    "https://west.englandhockey.co.uk/fixtures/d7faf209-c109-4400-9695-6d93a58fbf2c",
+    "https://west.englandhockey.co.uk/fixtures/db150f60-e61f-43b7-b315-64755d785cf4",
+    "https://west.englandhockey.co.uk/fixtures/dd3f876b-a931-4fd8-b72c-3c3bb12856bd",
+    "https://west.englandhockey.co.uk/fixtures/df8b8670-dccd-46af-a7d9-df595a935979",
+    "https://west.englandhockey.co.uk/fixtures/e2785969-f678-4dc9-9adb-55966b1ea61c",
+    "https://west.englandhockey.co.uk/fixtures/e2eb6d7f-1e2d-4f49-9286-ea43ba8bb4a9",
+    "https://west.englandhockey.co.uk/fixtures/e8f2d6bb-6df6-4b93-be86-66d0fdc012d2",
+    "https://west.englandhockey.co.uk/fixtures/e94e7d21-55eb-4be8-8eb3-5a68ac712b8a",
+    "https://west.englandhockey.co.uk/fixtures/ee1c429f-8197-43db-9988-2743f94e3fbe",
+    "https://west.englandhockey.co.uk/fixtures/f152d969-e49f-4ce0-a5f1-c0ccc2eef20b",
+    "https://west.englandhockey.co.uk/fixtures/f2a09f66-9730-4b10-8846-d2a8304a6fb8",
+    "https://west.englandhockey.co.uk/fixtures/f6c0a90d-897b-4a7f-b108-3a8c72bc8497",
+    "https://west.englandhockey.co.uk/fixtures/fb38fa27-b2f2-458a-a806-6472deefbfb8",
+    "https://west.englandhockey.co.uk/fixtures/fc25f5ff-549f-4245-9a55-eb4370baf607",
+    "https://west.englandhockey.co.uk/fixtures/fe0047b5-a7a3-4621-9e65-0931407200c3",
+    "https://west.englandhockey.co.uk/fixtures/fe734900-1581-4df1-91d4-dc2602fe1ce9"
   ]
 }

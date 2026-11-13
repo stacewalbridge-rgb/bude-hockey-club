@@ -32,7 +32,7 @@ function extractVenue(lines,dateLineIndex){
     const x=clean(lines[i]);
     if(!x||bad.test(x)||/^\d{1,2}:\d{2}$/.test(x)) continue;
     if(teamFor(x)||/\bHC\b/.test(x)) continue;
-    if(/^[A-Z\s-]+GROUP$/.test(x)) continue;
+    if(/^[A-Z\s&'-]+(GROUP|MATCHES)$/.test(x)) continue;
     if(/division|piran|trelawney/i.test(x)) continue;
     return x;
   }
@@ -100,6 +100,15 @@ function parseFixturePage(title,body,url){
 }
 
 async function main(){
+  // Team pages only list upcoming games, so remember every fixture link ever seen.
+  // Re-checking them later is how upcoming fixtures turn into results with scores.
+  let known=[];
+  try{
+    const prev=JSON.parse(await fs.readFile(OUT,'utf8'));
+    known=[...(prev.knownFixtures||[]),
+      ...[...(prev.fixtures||[]),...(prev.results||[])].map(x=>x.source),
+      ...(prev.sponsorshipDays||[]).flatMap(d=>(d.matchBallSlots||[]).map(m=>m.source))];
+  }catch{}
   const browser=await chromium.launch({headless:true});
   try{
     const page=await browser.newPage({viewport:{width:1440,height:1200}});
@@ -107,6 +116,7 @@ async function main(){
     await page.waitForTimeout(12000);
     try{await page.waitForLoadState('networkidle',{timeout:15000});}catch{}
     const links=new Set(await page.evaluate(()=>[...document.querySelectorAll('a[href*="/fixtures/"]')].map(a=>a.href.split('?')[0])));
+    known.filter(u=>/^https:\/\/west\.englandhockey\.co\.uk\/fixtures\/[0-9a-f-]{36}$/i.test(u||'')).forEach(u=>links.add(u));
     for(const team of TEAMS){
       const tp=await browser.newPage({viewport:{width:1400,height:1100}});
       const discovered=new Set();
@@ -142,7 +152,7 @@ async function main(){
     if(!links.size) throw new Error('England Hockey loaded but no fixture links were found; refusing to keep stale data as a successful sync.');
 
     const parsed=[];
-    for(const url of [...links].slice(0,180)){
+    for(const url of [...links].slice(0,400)){
       const p=await browser.newPage({viewport:{width:1280,height:1000}});
       try{
         await p.goto(url+'?tab=moreinfo',{waitUntil:'domcontentloaded',timeout:45000});
@@ -159,7 +169,11 @@ async function main(){
     const results=[];
     for(const t of TEAMS){
       const teamMatches=parsed.filter(x=>x.key===t.key).sort((a,b)=>a.dateStamp-b.dateStamp);
-      const next=teamMatches.find(x=>x.dateStamp>=now-6*60*60*1000 && x.budeScore===null);
+      // England Hockey lists some cup ties as placeholders with time 00:00 and no venue.
+      // Ignore those when the team has a properly scheduled match on the same day.
+      const dayKey=x=>new Date(x.dateStamp).toISOString().slice(0,10);
+      const scheduled=teamMatches.filter(x=>!(x.time==='00:00' && teamMatches.some(y=>y!==x && y.time!=='00:00' && dayKey(y)===dayKey(x))));
+      const next=scheduled.find(x=>x.dateStamp>=now-6*60*60*1000 && x.budeScore===null);
       if(next){
         fixtures.push({
           team:next.team,league:next.league,date:next.date,
@@ -211,7 +225,8 @@ async function main(){
       };
     });
 
-    const payload={updated:new Date().toISOString(),source:SOURCE,automatic:true,fixtures,results,sponsorshipDays};
+    const knownFixtures=[...new Set(parsed.map(x=>x.source))].sort();
+    const payload={updated:new Date().toISOString(),source:SOURCE,automatic:true,fixtures,results,sponsorshipDays,knownFixtures};
     await fs.writeFile(OUT,JSON.stringify(payload,null,2)+'\n','utf8');
     console.log(JSON.stringify(payload,null,2));
   }finally{await browser.close()}
