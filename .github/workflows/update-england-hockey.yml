@@ -8,32 +8,104 @@ on:
       - 'scripts/update-england-hockey.mjs'
       - '.github/workflows/update-england-hockey.yml'
   schedule:
+    # Twice a day every day
     - cron: '17 5,17 * * *'
+    # Saturday evening and Sunday so match results appear quickly
+    - cron: '47 18,21 * * 6'
+    - cron: '17 10 * * 0'
 
 permissions:
   contents: write
+  issues: write
+
+concurrency:
+  group: england-hockey-fixtures
+  cancel-in-progress: false
 
 jobs:
   update:
-    # Pinned: Playwright 1.55 cannot install Chromium on the ubuntu-latest (26.04) image.
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    # Playwright's official image ships Chromium and all its system libraries, so a
+    # GitHub runner OS upgrade can no longer break the browser install (that is what
+    # stopped updates in November 2026). Keep the tag in step with PLAYWRIGHT_VERSION.
+    container:
+      image: mcr.microsoft.com/playwright:v1.55.0-noble
+    env:
+      PLAYWRIGHT_VERSION: 1.55.0
     steps:
+      - name: Ensure git is available
+        run: command -v git >/dev/null || (apt-get update && apt-get install -y --no-install-recommends git ca-certificates)
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Install Playwright
+      - name: Install Playwright library
+        run: npm install --no-save --no-audit --no-fund playwright@${PLAYWRIGHT_VERSION}
+      - name: Scan England Hockey (up to 3 attempts)
         run: |
-          npm install --no-save playwright@1.55.0
-          npx playwright install --with-deps chromium
-      - name: Scan England Hockey
-        run: node scripts/update-england-hockey.mjs
+          for attempt in 1 2 3; do
+            if node scripts/update-england-hockey.mjs > /tmp/scan.log 2>&1; then
+              tail -n 40 /tmp/scan.log; exit 0
+            fi
+            tail -n 40 /tmp/scan.log
+            echo "::warning::England Hockey scan attempt $attempt failed; retrying in 90 seconds"
+            sleep 90
+          done
+          echo "::error::England Hockey scan failed 3 times; the website is still showing the previous data."
+          exit 1
       - name: Commit changes
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name "Bude HC Fixtures Bot"
           git config user.email "actions@users.noreply.github.com"
           git add public/fixtures.json
           git diff --cached --quiet && exit 0
           git commit -m "Auto-update England Hockey fixtures and results"
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 10
+          done
+          exit 1
+
+  # Safety net: if fixtures stop updating for any reason (England Hockey changes its
+  # site, GitHub changes something, etc.), fail loudly and open an issue so the
+  # repository owner gets an email instead of the website quietly going stale.
+  freshness-check:
+    needs: update
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Check fixtures were updated in the last 2 days
+        id: fresh
+        run: |
+          python3 - <<'EOF'
+          import json, datetime, os, sys
+          d = json.load(open("public/fixtures.json"))
+          updated = datetime.datetime.fromisoformat(d["updated"].replace("Z", "+00:00"))
+          age = datetime.datetime.now(datetime.timezone.utc) - updated
+          hours = age.total_seconds() / 3600
+          print(f"fixtures.json last updated {updated.isoformat()} ({hours:.1f} hours ago)")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"hours={hours:.0f}\n")
+          sys.exit(1 if hours > 48 else 0)
+          EOF
+      - name: Open or update an alert issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Website fixtures are not updating from England Hockey"
+          body="The fixtures and results on budehockeyclub.co.uk have not updated for ${{ steps.fresh.outputs.hours }} hours. The website is hiding games that have already been played, but new fixtures and results will not appear until this is fixed. Latest run: $RUN_URL"
+          num=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number')
+          if [ -n "$num" ]; then gh issue comment "$num" --body "$body"; else gh issue create --title "$title" --body "$body"; fi
+      - name: Close alert issue when healthy again
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Website fixtures are not updating from England Hockey"
+          for num in $(gh issue list --state open --search "$title in:title" --json number --jq '.[].number'); do
+            gh issue close "$num" --comment "Fixtures are updating again."
+          done

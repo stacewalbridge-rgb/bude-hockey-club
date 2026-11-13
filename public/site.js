@@ -10,6 +10,10 @@ if(menuBtn&&mobileNav){
     menuBtn.setAttribute('aria-expanded','false');
   }));
 }
+function todayKey(){
+  // YYYY-MM-DD in UK time
+  return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+}
 function updateHomeGameBanner(){
   const cards=[...document.querySelectorAll('.fixture-card')];
   const home=cards.filter(card=>(card.querySelector('.fixture-meta')?.textContent||'').toLowerCase().includes('home'));
@@ -26,8 +30,15 @@ async function loadFixtures(){
     const res=await fetch('/fixtures.json',{cache:'no-store'});
     if(!res.ok) return;
     const data=await res.json();
-    if(Array.isArray(data.fixtures)&&data.fixtures.length){
-      grid.innerHTML=data.fixtures.map(f=>`
+    // Never show a game that has already been played as an upcoming fixture,
+    // even if the automatic England Hockey update has not run for a while.
+    const today=todayKey();
+    const upcoming=(Array.isArray(data.fixtures)?data.fixtures:[]).filter(f=>!f.dateKey||f.dateKey>=today);
+    if(Array.isArray(data.fixtures)&&data.fixtures.length&&!upcoming.length){
+      grid.innerHTML='<article class="fixture-card"><div class="fixture-team">Fixtures updating</div><div class="fixture-opponent">The latest Bude fixtures are being refreshed.</div><div class="fixture-source"><a class="link" href="https://west.englandhockey.co.uk/clubs/bude-hc/fixtures" target="_blank" rel="noreferrer">See all fixtures on England Hockey ↗</a></div></article>';
+    }
+    if(upcoming.length){
+      grid.innerHTML=upcoming.map(f=>`
         <article class="fixture-card">
           <div class="fixture-team">${f.team}</div>
           <div class="fixture-league">${f.league||''}</div>
@@ -98,7 +109,7 @@ async function loadSponsorshipAvailability(){
     const res=await fetch('/fixtures.json',{cache:'no-store'});
     if(!res.ok) throw new Error('fixtures '+res.status);
     const data=await res.json();
-    let days=Array.isArray(data.sponsorshipDays)?data.sponsorshipDays:[];
+    let days=(Array.isArray(data.sponsorshipDays)?data.sponsorshipDays:[]).filter(d=>!d.dateKey||d.dateKey>=todayKey());
     if(!days.length && Array.isArray(data.fixtures)){
       const grouped={};
       data.fixtures.filter(f=>(f.meta||'').toLowerCase().includes('home')).forEach(f=>{

@@ -176,7 +176,7 @@ async function main(){
       const next=scheduled.find(x=>x.dateStamp>=now-6*60*60*1000 && x.budeScore===null);
       if(next){
         fixtures.push({
-          team:next.team,league:next.league,date:next.date,
+          team:next.team,league:next.league,date:next.date,dateKey:new Date(next.dateStamp).toISOString().slice(0,10),
           fixture:`${next.home} v ${next.away}`,
           meta:[next.time,next.isHome?'Home':'Away',next.isHome?'Budehaven Astro Turf Pitch':next.venue].filter(Boolean).join(' • '),
           location:next.isHome?'Budehaven Astro Turf Pitch':next.venue,source:next.source
@@ -185,7 +185,7 @@ async function main(){
       const previous=teamMatches.filter(x=>x.dateStamp<now && x.budeScore!==null).sort((a,b)=>b.dateStamp-a.dateStamp)[0];
       if(previous){
         results.push({
-          team:previous.team,league:previous.league,date:previous.date,
+          team:previous.team,league:previous.league,date:previous.date,dateKey:new Date(previous.dateStamp).toISOString().slice(0,10),
           score:`${previous.budeScore}–${previous.oppScore}`,
           opponent:previous.opponent,
           venue:previous.isHome?'Home':'Away',
