@@ -10,6 +10,18 @@ if(menuBtn&&mobileNav){
     menuBtn.setAttribute('aria-expanded','false');
   }));
 }
+function escapeHtml(v){return String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function groupScorers(list){
+  // One chip per player, e.g. "Briony Varcoe ×2 12’, 40’"
+  const map=new Map();
+  list.forEach(s=>{
+    const name=s.name||'Name Withheld';
+    const g=map.get(name)||{name,count:0,minutes:[]};
+    g.count++; if(s.minute) g.minutes.push(s.minute);
+    map.set(name,g);
+  });
+  return [...map.values()].sort((a,b)=>(a.name==='Name Withheld')-(b.name==='Name Withheld')||b.count-a.count);
+}
 function todayKey(){
   // YYYY-MM-DD in UK time
   return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
@@ -58,7 +70,7 @@ async function loadFixtures(){
           <div class="result-topline"><strong>${r.team}</strong>${win?'<span class="win-stars" title="Bude win" aria-label="Bude win">★ ★ ★</span>':''}</div>
           <div class="score">${r.score}</div>
           <div>${r.opponent||''}${r.venue?' • '+r.venue:''}</div>
-          ${Array.isArray(r.scorers)&&r.scorers.length?'<div class="goal-scorers"><strong>Goal scorers</strong><div>'+r.scorers.map(s=>'<span class="scorer-chip">'+(s.name||'Name Withheld')+(s.minute?' <small>'+s.minute+'’</small>':'')+'</span>').join('')+'</div></div>':''}
+          ${Array.isArray(r.scorers)&&r.scorers.length?'<div class="goal-scorers"><strong>Goal scorers</strong><div>'+groupScorers(r.scorers).map(s=>'<span class="scorer-chip">'+escapeHtml(s.name)+(s.count>1?' ×'+s.count:'')+(s.minutes.length?' <small>'+s.minutes.map(m=>m+'’').join(', ')+'</small>':'')+'</span>').join('')+'</div></div>':''}
           ${win?'<div class="win-splash" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>':''}
         </div>`;
       }).join('');

@@ -64,7 +64,21 @@ function extractBudeScorers(lines,scoreIndex,dateIndex,isHome){
     .map(x=>({name:/name withheld/i.test(x.name)?'Name Withheld':x.name,minute:x.minute}));
 }
 
-function parseFixturePage(title,body,url){
+// England Hockey shows each team's match events (goals, cards) in separate home/away
+// boxes, each with an icon. Only these icons count as goals.
+const GOAL_ICONS=new Set(['field-goal','penalty-corner','penalty-stroke']);
+function scorersFromEvents(events,side){
+  return (events||[])
+    .filter(e=>e.side===side && GOAL_ICONS.has(e.icon))
+    .map(e=>{
+      const m=e.text.match(/(\d{1,3})\s*[’']/);
+      const name=clean(e.text.replace(/\d{1,3}\s*[’']/,''));
+      return {name:(!name||/name withheld/i.test(name))?'Name Withheld':name,minute:m?Number(m[1]):0};
+    })
+    .sort((a,b)=>(a.minute||999)-(b.minute||999));
+}
+
+function parseFixturePage(title,body,url,events){
   const titleText=clean(title).replace(/\s*\|\s*West Hockey\s*$/i,'');
   const tm=titleText.match(/^(.*?)\s+vs\s+(.*?)$/i);
   if(!tm) return null;
@@ -89,9 +103,12 @@ function parseFixturePage(title,body,url){
     budeScore=isHome?a:b; oppScore=isHome?b:a;
     scoreIndex=lines.findIndex(x=>scoreRx.test(x));
   }
-  const scorers=(budeScore!==null && budeScore>0)
-    ? extractBudeScorers(lines,scoreIndex,dateLineIndex,isHome).slice(0,budeScore)
-    : [];
+  let scorers=[];
+  if(budeScore!==null && budeScore>0){
+    scorers=scorersFromEvents(events,isHome?'home':'away');
+    if(!scorers.length) scorers=extractBudeScorers(lines,scoreIndex,dateLineIndex,isHome);
+    scorers=scorers.slice(0,budeScore);
+  }
   return {
     team:budeTeam.name,key:budeTeam.key,league:LEAGUES[budeTeam.key],
     home,away,isHome,opponent,dateStamp:stamp,date:shortDate(stamp),
@@ -157,7 +174,12 @@ async function main(){
       try{
         await p.goto(url+'?tab=moreinfo',{waitUntil:'domcontentloaded',timeout:45000});
         await p.waitForTimeout(1200);
-        const data=parseFixturePage(await p.title(),await p.locator('body').innerText(),url);
+        const events=await p.$$eval('.c-info-board-item__text',items=>items.map(x=>({
+          side:x.closest('[class*="info-board-home"]')?'home':(x.closest('[class*="info-board-away"]')?'away':''),
+          text:x.innerText.replace(/\s+/g,' ').trim(),
+          icon:((x.querySelector('svg')?.outerHTML||'').match(/#([\w-]+)"/)||[])[1]||''
+        }))).catch(()=>[]);
+        const data=parseFixturePage(await p.title(),await p.locator('body').innerText(),url,events);
         if(data) parsed.push(data);
       }catch(e){console.warn('Skipped fixture',url,e.message)}
       finally{await p.close()}

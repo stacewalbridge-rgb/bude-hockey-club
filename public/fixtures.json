@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T09:36:52.034Z",
+  "updated": "2026-11-13T09:50:53.625Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -54,7 +54,16 @@
       "opponent": "Ocean City M2",
       "venue": "Away",
       "location": "Stoke Damerel Community College",
-      "scorers": [],
+      "scorers": [
+        {
+          "name": "Matthew Horton",
+          "minute": 60
+        },
+        {
+          "name": "Charlie Falla",
+          "minute": 62
+        }
+      ],
       "source": "https://west.englandhockey.co.uk/fixtures/68631f49-884e-430b-a437-865581a665e0"
     },
     {
@@ -78,7 +87,44 @@
       "opponent": "Tavistock & Launceston W2",
       "venue": "Away",
       "location": "Tavistock - Mount Kelly School (V)",
-      "scorers": [],
+      "scorers": [
+        {
+          "name": "Isabel Sobey",
+          "minute": 3
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 6
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 9
+        },
+        {
+          "name": "Charlotte Prime",
+          "minute": 16
+        },
+        {
+          "name": "Briony Varcoe",
+          "minute": 21
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 24
+        },
+        {
+          "name": "Naomi Hatcher",
+          "minute": 27
+        },
+        {
+          "name": "Briony Varcoe",
+          "minute": 28
+        },
+        {
+          "name": "Charlotte Kingdon",
+          "minute": 32
+        }
+      ],
       "source": "https://west.englandhockey.co.uk/fixtures/02839695-1e34-4dfc-96f3-b42c78ba2451"
     },
     {
@@ -90,7 +136,16 @@
       "opponent": "Camborne SoM W2",
       "venue": "Away",
       "location": "Penryn - Penryn College (V)",
-      "scorers": [],
+      "scorers": [
+        {
+          "name": "Ellie Midelton",
+          "minute": 0
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 0
+        }
+      ],
       "source": "https://west.englandhockey.co.uk/fixtures/a5c5fea2-7b15-4269-97a8-fec925d2173c"
     }
   ],
