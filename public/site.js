@@ -111,7 +111,7 @@ const MATCH_DAY_SPONSORS={
   '2026-11-14':{name:'Bleujen Florists',url:'https://www.bleujenflorist.com/',logo:null,brand:'BLEUJEN'},
   '2026-11-28':{name:"Harpers Feeds",url:'https://www.harpersfeeds.co.uk/',logo:null,brand:'HARPERS FEEDS'},
   '2027-01-16':{name:'Giles & Parsons Farm Vets',url:'https://www.gpfarmvets.co.uk/',logo:'https://static.wixstatic.com/media/00a339_7594e3fe48e847ef92bafb7714a509d6~mv2.png/v1/fill/w_176,h_176,al_c,q_90/Logo.png',brand:'GILES & PARSONS'},
-  '2027-02-06':{name:'Jennings & Company',url:'https://www.jenningsandcompany.co.uk/',logo:null,brand:'JENNINGS & COMPANY'}
+  '2027-02-06':{name:'Jennings & Company',url:'https://www.jenningsandcompany.co.uk/',logo:'/images/jennings-company-logo.png',brand:'JENNINGS & COMPANY'}
 };
 
 async function loadSponsorshipAvailability(){
