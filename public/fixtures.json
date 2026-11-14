@@ -1,16 +1,59 @@
 {
-  "updated": "2026-11-14T12:27:36.455Z",
+  "updated": "2026-11-14T21:42:59.922Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
+      "date": "Sat 21 Nov",
+      "dateKey": "2026-11-21",
+      "fixture": "Bodmin M1 v Bude M1",
+      "meta": "10:30 • Away • Bodmin - Dragon Leisure Centre (V)",
+      "location": "Bodmin - Dragon Leisure Centre (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/cf8055a7-fa8b-4b03-bd09-a01fccc78470"
+    },
+    {
+      "team": "Ladies 1",
+      "league": "Women's Trelawney Division 2",
+      "date": "Sat 21 Nov",
+      "dateKey": "2026-11-21",
+      "fixture": "Duchy W2 v Bude W1",
+      "meta": "11:00 • Away • Redruth - Pool Academy (V)",
+      "location": "Redruth - Pool Academy (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/fe734900-1581-4df1-91d4-dc2602fe1ce9"
+    },
+    {
+      "team": "Ladies Development",
+      "league": "Women's Trelawney Division 3",
+      "date": "Sat 21 Nov",
+      "dateKey": "2026-11-21",
+      "fixture": "Bude W2 Dev v Falmouth W4",
+      "meta": "12:00 • Home • Budehaven Astro Turf Pitch",
+      "location": "Budehaven Astro Turf Pitch",
+      "source": "https://west.englandhockey.co.uk/fixtures/3bf26adc-29ac-4bce-917f-5c58c6cdeb87"
+    }
+  ],
+  "results": [
+    {
+      "team": "Bude M1",
+      "league": "Men's Piran Division 1",
       "date": "Sat 14 Nov",
       "dateKey": "2026-11-14",
-      "fixture": "Bude M1 v Devonport Services M1",
-      "meta": "15:00 • Home • Budehaven Astro Turf Pitch",
+      "score": "2–1",
+      "opponent": "Devonport Services M1",
+      "venue": "Home",
       "location": "Budehaven Astro Turf Pitch",
+      "scorers": [
+        {
+          "name": "Name Withheld",
+          "minute": 7
+        },
+        {
+          "name": "Robin Jennings",
+          "minute": 14
+        }
+      ],
       "source": "https://west.englandhockey.co.uk/fixtures/e8f2d6bb-6df6-4b93-be86-66d0fdc012d2"
     },
     {
@@ -18,9 +61,16 @@
       "league": "Men's Piran Division 3",
       "date": "Sat 14 Nov",
       "dateKey": "2026-11-14",
-      "fixture": "Caradon M3 Dev v Bude M2",
-      "meta": "14:00 • Away • Liskeard - Liskeard Leisure Centre (V)",
+      "score": "1–3",
+      "opponent": "Caradon M3 Dev",
+      "venue": "Away",
       "location": "Liskeard - Liskeard Leisure Centre (V)",
+      "scorers": [
+        {
+          "name": "Name Withheld",
+          "minute": 45
+        }
+      ],
       "source": "https://west.englandhockey.co.uk/fixtures/95332b52-d9fe-4be3-a468-5b1719ac5109"
     },
     {
@@ -28,9 +78,28 @@
       "league": "Women's Trelawney Division 2",
       "date": "Sat 14 Nov",
       "dateKey": "2026-11-14",
-      "fixture": "Bude W1 v Penzance W3",
-      "meta": "13:30 • Home • Budehaven Astro Turf Pitch",
+      "score": "4–0",
+      "opponent": "Penzance W3",
+      "venue": "Home",
       "location": "Budehaven Astro Turf Pitch",
+      "scorers": [
+        {
+          "name": "Mia Flynn",
+          "minute": 0
+        },
+        {
+          "name": "Isabel Sobey",
+          "minute": 0
+        },
+        {
+          "name": "Isabel Sobey",
+          "minute": 0
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 0
+        }
+      ],
       "source": "https://west.englandhockey.co.uk/fixtures/752d9eb1-96e5-49e6-9586-bcfdbe7de317"
     },
     {
@@ -38,145 +107,36 @@
       "league": "Women's Trelawney Division 3",
       "date": "Sat 14 Nov",
       "dateKey": "2026-11-14",
-      "fixture": "Bude W2 Dev v St Austell W2 Dev",
-      "meta": "12:00 • Home • Budehaven Astro Turf Pitch",
+      "score": "5–0",
+      "opponent": "St Austell W2 Dev",
+      "venue": "Home",
       "location": "Budehaven Astro Turf Pitch",
+      "scorers": [
+        {
+          "name": "Name Withheld",
+          "minute": 0
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 0
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 0
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 0
+        },
+        {
+          "name": "Miranda Roper",
+          "minute": 0
+        }
+      ],
       "source": "https://west.englandhockey.co.uk/fixtures/5e4de2f1-1702-416a-b7dc-5cab08ba0caf"
     }
   ],
-  "results": [
-    {
-      "team": "Bude M1",
-      "league": "Men's Piran Division 1",
-      "date": "Sat 7 Nov",
-      "dateKey": "2026-11-07",
-      "score": "2–6",
-      "opponent": "Ocean City M2",
-      "venue": "Away",
-      "location": "Stoke Damerel Community College",
-      "scorers": [
-        {
-          "name": "Matthew Horton",
-          "minute": 60
-        },
-        {
-          "name": "Charlie Falla",
-          "minute": 62
-        }
-      ],
-      "source": "https://west.englandhockey.co.uk/fixtures/68631f49-884e-430b-a437-865581a665e0"
-    },
-    {
-      "team": "Bude Men's 2nd Team",
-      "league": "Men's Piran Division 3",
-      "date": "Sat 7 Nov",
-      "dateKey": "2026-11-07",
-      "score": "0–6",
-      "opponent": "Duchy M2",
-      "venue": "Home",
-      "location": "Budehaven Astro Turf Pitch",
-      "scorers": [],
-      "source": "https://west.englandhockey.co.uk/fixtures/8f0fbfde-91a2-47a7-b775-a12a3ecd6f23"
-    },
-    {
-      "team": "Ladies 1",
-      "league": "Women's Trelawney Division 2",
-      "date": "Sat 7 Nov",
-      "dateKey": "2026-11-07",
-      "score": "9–1",
-      "opponent": "Tavistock & Launceston W2",
-      "venue": "Away",
-      "location": "Tavistock - Mount Kelly School (V)",
-      "scorers": [
-        {
-          "name": "Isabel Sobey",
-          "minute": 3
-        },
-        {
-          "name": "Name Withheld",
-          "minute": 6
-        },
-        {
-          "name": "Name Withheld",
-          "minute": 9
-        },
-        {
-          "name": "Charlotte Prime",
-          "minute": 16
-        },
-        {
-          "name": "Briony Varcoe",
-          "minute": 21
-        },
-        {
-          "name": "Name Withheld",
-          "minute": 24
-        },
-        {
-          "name": "Naomi Hatcher",
-          "minute": 27
-        },
-        {
-          "name": "Briony Varcoe",
-          "minute": 28
-        },
-        {
-          "name": "Charlotte Kingdon",
-          "minute": 32
-        }
-      ],
-      "source": "https://west.englandhockey.co.uk/fixtures/02839695-1e34-4dfc-96f3-b42c78ba2451"
-    },
-    {
-      "team": "Ladies Development",
-      "league": "Women's Trelawney Division 3",
-      "date": "Sat 7 Nov",
-      "dateKey": "2026-11-07",
-      "score": "2–0",
-      "opponent": "Camborne SoM W2",
-      "venue": "Away",
-      "location": "Penryn - Penryn College (V)",
-      "scorers": [
-        {
-          "name": "Ellie Midelton",
-          "minute": 0
-        },
-        {
-          "name": "Name Withheld",
-          "minute": 0
-        }
-      ],
-      "source": "https://west.englandhockey.co.uk/fixtures/a5c5fea2-7b15-4269-97a8-fec925d2173c"
-    }
-  ],
   "sponsorshipDays": [
-    {
-      "dateKey": "2026-11-14",
-      "date": "Sat 14 Nov",
-      "venue": "Budehaven Astro Turf Pitch",
-      "fullMatchDayEligible": true,
-      "halfMatchDayEligible": true,
-      "matchBallSlots": [
-        {
-          "team": "Ladies Development",
-          "fixture": "Bude W2 Dev v St Austell W2 Dev",
-          "time": "12:00",
-          "source": "https://west.englandhockey.co.uk/fixtures/5e4de2f1-1702-416a-b7dc-5cab08ba0caf"
-        },
-        {
-          "team": "Ladies 1",
-          "fixture": "Bude W1 v Penzance W3",
-          "time": "13:30",
-          "source": "https://west.englandhockey.co.uk/fixtures/752d9eb1-96e5-49e6-9586-bcfdbe7de317"
-        },
-        {
-          "team": "Bude M1",
-          "fixture": "Bude M1 v Devonport Services M1",
-          "time": "15:00",
-          "source": "https://west.englandhockey.co.uk/fixtures/e8f2d6bb-6df6-4b93-be86-66d0fdc012d2"
-        }
-      ]
-    },
     {
       "dateKey": "2026-11-21",
       "date": "Sat 21 Nov",
