@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T22:55:26.036Z",
+  "updated": "2026-11-15T13:00:21.972Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -12,6 +12,16 @@
       "meta": "10:30 • Away • Bodmin - Dragon Leisure Centre (V)",
       "location": "Bodmin - Dragon Leisure Centre (V)",
       "source": "https://west.englandhockey.co.uk/fixtures/cf8055a7-fa8b-4b03-bd09-a01fccc78470"
+    },
+    {
+      "team": "Bude Men's 2nd Team",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 21 Nov",
+      "dateKey": "2026-11-21",
+      "fixture": "Bude M2 v Truro M5",
+      "meta": "13:30 • Home • Budehaven Astro Turf Pitch",
+      "location": "Budehaven Astro Turf Pitch",
+      "source": "https://west.englandhockey.co.uk/fixtures/6130eb8b-3ab1-4915-b49d-d4440f5d4768"
     },
     {
       "team": "Ladies 1",
@@ -141,7 +151,7 @@
       "dateKey": "2026-11-21",
       "date": "Sat 21 Nov",
       "venue": "Budehaven Astro Turf Pitch",
-      "fullMatchDayEligible": false,
+      "fullMatchDayEligible": true,
       "halfMatchDayEligible": true,
       "matchBallSlots": [
         {
@@ -149,6 +159,12 @@
           "fixture": "Bude W2 Dev v Falmouth W4",
           "time": "12:00",
           "source": "https://west.englandhockey.co.uk/fixtures/3bf26adc-29ac-4bce-917f-5c58c6cdeb87"
+        },
+        {
+          "team": "Bude Men's 2nd Team",
+          "fixture": "Bude M2 v Truro M5",
+          "time": "13:30",
+          "source": "https://west.englandhockey.co.uk/fixtures/6130eb8b-3ab1-4915-b49d-d4440f5d4768"
         }
       ]
     },
@@ -400,6 +416,7 @@
     "https://west.englandhockey.co.uk/fixtures/55029d7c-834d-4e40-9892-4b341374ca95",
     "https://west.englandhockey.co.uk/fixtures/5e4de2f1-1702-416a-b7dc-5cab08ba0caf",
     "https://west.englandhockey.co.uk/fixtures/60558556-2492-4f36-bc65-81c3f5d670ee",
+    "https://west.englandhockey.co.uk/fixtures/6130eb8b-3ab1-4915-b49d-d4440f5d4768",
     "https://west.englandhockey.co.uk/fixtures/68631f49-884e-430b-a437-865581a665e0",
     "https://west.englandhockey.co.uk/fixtures/71a52beb-2d61-4cca-911d-c8d5d095fd31",
     "https://west.englandhockey.co.uk/fixtures/73469ca1-1998-49e6-b10c-8a4e65dcc3be",
