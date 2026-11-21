@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T13:43:02.519Z",
+  "updated": "2026-11-21T22:23:42.681Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -14,16 +14,6 @@
       "source": "https://west.englandhockey.co.uk/fixtures/e94e7d21-55eb-4be8-8eb3-5a68ac712b8a"
     },
     {
-      "team": "Bude Men's 2nd Team",
-      "league": "Men's Piran Division 3",
-      "date": "Sat 21 Nov",
-      "dateKey": "2026-11-21",
-      "fixture": "Bude M2 v Truro M5",
-      "meta": "13:30 • Home • Budehaven Astro Turf Pitch",
-      "location": "Budehaven Astro Turf Pitch",
-      "source": "https://west.englandhockey.co.uk/fixtures/6130eb8b-3ab1-4915-b49d-d4440f5d4768"
-    },
-    {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
       "date": "Sat 28 Nov",
@@ -36,12 +26,12 @@
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 21 Nov",
-      "dateKey": "2026-11-21",
-      "fixture": "Bude W2 Dev v Falmouth W4",
-      "meta": "12:00 • Home • Budehaven Astro Turf Pitch",
-      "location": "Budehaven Astro Turf Pitch",
-      "source": "https://west.englandhockey.co.uk/fixtures/3bf26adc-29ac-4bce-917f-5c58c6cdeb87"
+      "date": "Sat 28 Nov",
+      "dateKey": "2026-11-28",
+      "fixture": "Truro W3 v Bude W2 Dev",
+      "meta": "16:00 • Away • Truro - Truro School (V)",
+      "location": "Truro - Truro School (V)",
+      "source": "https://west.englandhockey.co.uk/fixtures/1f5bda39-e5c2-4946-a25e-a25365b0c584"
     }
   ],
   "results": [
@@ -85,19 +75,27 @@
     {
       "team": "Bude Men's 2nd Team",
       "league": "Men's Piran Division 3",
-      "date": "Sat 14 Nov",
-      "dateKey": "2026-11-14",
-      "score": "1–3",
-      "opponent": "Caradon M3 Dev",
-      "venue": "Away",
-      "location": "Liskeard - Liskeard Leisure Centre (V)",
+      "date": "Sat 21 Nov",
+      "dateKey": "2026-11-21",
+      "score": "3–4",
+      "opponent": "Truro M5",
+      "venue": "Home",
+      "location": "Budehaven Astro Turf Pitch",
       "scorers": [
+        {
+          "name": "Name Withheld",
+          "minute": 8
+        },
+        {
+          "name": "Name Withheld",
+          "minute": 26
+        },
         {
           "name": "Name Withheld",
           "minute": 45
         }
       ],
-      "source": "https://west.englandhockey.co.uk/fixtures/95332b52-d9fe-4be3-a468-5b1719ac5109"
+      "source": "https://west.englandhockey.co.uk/fixtures/6130eb8b-3ab1-4915-b49d-d4440f5d4768"
     },
     {
       "team": "Ladies 1",
@@ -167,10 +165,10 @@
     {
       "team": "Ladies Development",
       "league": "Women's Trelawney Division 3",
-      "date": "Sat 14 Nov",
-      "dateKey": "2026-11-14",
-      "score": "5–0",
-      "opponent": "St Austell W2 Dev",
+      "date": "Sat 21 Nov",
+      "dateKey": "2026-11-21",
+      "score": "2–0",
+      "opponent": "Falmouth W4",
       "venue": "Home",
       "location": "Budehaven Astro Turf Pitch",
       "scorers": [
@@ -179,47 +177,14 @@
           "minute": 0
         },
         {
-          "name": "Name Withheld",
-          "minute": 0
-        },
-        {
-          "name": "Name Withheld",
-          "minute": 0
-        },
-        {
-          "name": "Name Withheld",
-          "minute": 0
-        },
-        {
-          "name": "Miranda Roper",
+          "name": "Ellie Midelton",
           "minute": 0
         }
       ],
-      "source": "https://west.englandhockey.co.uk/fixtures/5e4de2f1-1702-416a-b7dc-5cab08ba0caf"
+      "source": "https://west.englandhockey.co.uk/fixtures/3bf26adc-29ac-4bce-917f-5c58c6cdeb87"
     }
   ],
   "sponsorshipDays": [
-    {
-      "dateKey": "2026-11-21",
-      "date": "Sat 21 Nov",
-      "venue": "Budehaven Astro Turf Pitch",
-      "fullMatchDayEligible": true,
-      "halfMatchDayEligible": true,
-      "matchBallSlots": [
-        {
-          "team": "Ladies Development",
-          "fixture": "Bude W2 Dev v Falmouth W4",
-          "time": "12:00",
-          "source": "https://west.englandhockey.co.uk/fixtures/3bf26adc-29ac-4bce-917f-5c58c6cdeb87"
-        },
-        {
-          "team": "Bude Men's 2nd Team",
-          "fixture": "Bude M2 v Truro M5",
-          "time": "13:30",
-          "source": "https://west.englandhockey.co.uk/fixtures/6130eb8b-3ab1-4915-b49d-d4440f5d4768"
-        }
-      ]
-    },
     {
       "dateKey": "2026-11-28",
       "date": "Sat 28 Nov",
