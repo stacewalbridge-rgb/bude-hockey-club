@@ -1,17 +1,17 @@
 {
-  "updated": "2026-11-20T23:19:27.612Z",
+  "updated": "2026-11-21T13:43:02.519Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 21 Nov",
-      "dateKey": "2026-11-21",
-      "fixture": "Bodmin M1 v Bude M1",
-      "meta": "10:30 • Away • Bodmin - Dragon Leisure Centre (V)",
-      "location": "Bodmin - Dragon Leisure Centre (V)",
-      "source": "https://west.englandhockey.co.uk/fixtures/cf8055a7-fa8b-4b03-bd09-a01fccc78470"
+      "date": "Sat 28 Nov",
+      "dateKey": "2026-11-28",
+      "fixture": "Bude M1 v Truro M3",
+      "meta": "13:30 • Home • Budehaven Astro Turf Pitch",
+      "location": "Budehaven Astro Turf Pitch",
+      "source": "https://west.englandhockey.co.uk/fixtures/e94e7d21-55eb-4be8-8eb3-5a68ac712b8a"
     },
     {
       "team": "Bude Men's 2nd Team",
@@ -26,12 +26,12 @@
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 21 Nov",
-      "dateKey": "2026-11-21",
-      "fixture": "Duchy W2 v Bude W1",
-      "meta": "11:00 • Away • Redruth - Pool Academy (V)",
-      "location": "Redruth - Pool Academy (V)",
-      "source": "https://west.englandhockey.co.uk/fixtures/fe734900-1581-4df1-91d4-dc2602fe1ce9"
+      "date": "Sat 28 Nov",
+      "dateKey": "2026-11-28",
+      "fixture": "Bude W1 v Caradon W4",
+      "meta": "12:00 • Home • Budehaven Astro Turf Pitch",
+      "location": "Budehaven Astro Turf Pitch",
+      "source": "https://west.englandhockey.co.uk/fixtures/30d7324f-c74e-4fe8-a62f-c8f61419e1d0"
     },
     {
       "team": "Ladies Development",
@@ -48,23 +48,39 @@
     {
       "team": "Bude M1",
       "league": "Men's Piran Division 1",
-      "date": "Sat 14 Nov",
-      "dateKey": "2026-11-14",
-      "score": "2–1",
-      "opponent": "Devonport Services M1",
-      "venue": "Home",
-      "location": "Budehaven Astro Turf Pitch",
+      "date": "Sat 21 Nov",
+      "dateKey": "2026-11-21",
+      "score": "6–3",
+      "opponent": "Bodmin M1",
+      "venue": "Away",
+      "location": "Bodmin - Dragon Leisure Centre (V)",
       "scorers": [
         {
-          "name": "Name Withheld",
-          "minute": 7
+          "name": "Charlie Falla",
+          "minute": 13
         },
         {
-          "name": "Robin Jennings",
-          "minute": 14
+          "name": "Kris Saunders",
+          "minute": 18
+        },
+        {
+          "name": "Kris Saunders",
+          "minute": 26
+        },
+        {
+          "name": "Kris Saunders",
+          "minute": 45
+        },
+        {
+          "name": "Kris Saunders",
+          "minute": 50
+        },
+        {
+          "name": "Matthew Smart",
+          "minute": 60
         }
       ],
-      "source": "https://west.englandhockey.co.uk/fixtures/e8f2d6bb-6df6-4b93-be86-66d0fdc012d2"
+      "source": "https://west.englandhockey.co.uk/fixtures/cf8055a7-fa8b-4b03-bd09-a01fccc78470"
     },
     {
       "team": "Bude Men's 2nd Team",
@@ -86,13 +102,21 @@
     {
       "team": "Ladies 1",
       "league": "Women's Trelawney Division 2",
-      "date": "Sat 14 Nov",
-      "dateKey": "2026-11-14",
-      "score": "4–0",
-      "opponent": "Penzance W3",
-      "venue": "Home",
-      "location": "Budehaven Astro Turf Pitch",
+      "date": "Sat 21 Nov",
+      "dateKey": "2026-11-21",
+      "score": "13–1",
+      "opponent": "Duchy W2",
+      "venue": "Away",
+      "location": "Redruth - Pool Academy (V)",
       "scorers": [
+        {
+          "name": "Mia Flynn",
+          "minute": 0
+        },
+        {
+          "name": "Mia Flynn",
+          "minute": 0
+        },
         {
           "name": "Mia Flynn",
           "minute": 0
@@ -102,15 +126,43 @@
           "minute": 0
         },
         {
-          "name": "Isabel Sobey",
+          "name": "Charlotte Kingdon",
           "minute": 0
         },
         {
-          "name": "Name Withheld",
+          "name": "Charlotte Kingdon",
+          "minute": 0
+        },
+        {
+          "name": "Charlotte Prime",
+          "minute": 0
+        },
+        {
+          "name": "Briony Varcoe",
+          "minute": 0
+        },
+        {
+          "name": "Briony Varcoe",
+          "minute": 0
+        },
+        {
+          "name": "Chloe Hall",
+          "minute": 0
+        },
+        {
+          "name": "Chloe Hall",
+          "minute": 0
+        },
+        {
+          "name": "Chloe Hall",
+          "minute": 0
+        },
+        {
+          "name": "Chloe Hall",
           "minute": 0
         }
       ],
-      "source": "https://west.englandhockey.co.uk/fixtures/752d9eb1-96e5-49e6-9586-bcfdbe7de317"
+      "source": "https://west.englandhockey.co.uk/fixtures/fe734900-1581-4df1-91d4-dc2602fe1ce9"
     },
     {
       "team": "Ladies Development",
