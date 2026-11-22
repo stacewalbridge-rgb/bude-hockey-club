@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T23:47:15.234Z",
+  "updated": "2026-11-22T13:37:02.219Z",
   "source": "https://west.englandhockey.co.uk/clubs/bude-hc/fixtures",
   "automatic": true,
   "fixtures": [
@@ -12,6 +12,16 @@
       "meta": "13:30 • Home • Budehaven Astro Turf Pitch",
       "location": "Budehaven Astro Turf Pitch",
       "source": "https://west.englandhockey.co.uk/fixtures/e94e7d21-55eb-4be8-8eb3-5a68ac712b8a"
+    },
+    {
+      "team": "Bude Men's 2nd Team",
+      "league": "Men's Piran Division 3",
+      "date": "Sat 28 Nov",
+      "dateKey": "2026-11-28",
+      "fixture": "Duchy M3 v Bude M2",
+      "meta": "12:45 • Away",
+      "location": "",
+      "source": "https://west.englandhockey.co.uk/fixtures/53d02c76-fa22-46c7-b147-bb41e73b1b8f"
     },
     {
       "team": "Ladies 1",
@@ -430,6 +440,7 @@
     "https://west.englandhockey.co.uk/fixtures/4407147f-4ee1-4bf7-8557-f944d82ba891",
     "https://west.englandhockey.co.uk/fixtures/463a8b4b-0dbd-47d5-a32f-f3542e64a816",
     "https://west.englandhockey.co.uk/fixtures/4740f7da-4b05-4b40-96d9-d2b87ea55cce",
+    "https://west.englandhockey.co.uk/fixtures/53d02c76-fa22-46c7-b147-bb41e73b1b8f",
     "https://west.englandhockey.co.uk/fixtures/55029d7c-834d-4e40-9892-4b341374ca95",
     "https://west.englandhockey.co.uk/fixtures/5e4de2f1-1702-416a-b7dc-5cab08ba0caf",
     "https://west.englandhockey.co.uk/fixtures/60558556-2492-4f36-bc65-81c3f5d670ee",
